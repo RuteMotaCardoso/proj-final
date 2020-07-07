@@ -32,4 +32,44 @@ A estrutura do site e navegação permitem o acesso a alguns ecrãs por vários 
 * Ficheiros de Back-end e Front-end
 * Modelo de dados (mwb, png, sql) da BDCursoProfissional
 * Imagens (site)
-* "Scripts" teste RESTer
+* "Scripts" teste RESTer (BE/assets/rester-export-postman.json)
+* URL BE Heroku (https://proj-final-curso-profissional.herokuapp.com/)
+
+
+
+## Git
+- https://docs.github.com/pt/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line
+git init
+git pull --allow-unrelated-histories origin master
+git add .
+git commit -m "Commit inicial Heroku"
+git remote add origin https://github.com/RuteMotaCardoso/proj-final.git
+git remote -v
+git push origin master
+
+## Heroku (npm install -> package e lock)
+- https://stackoverflow.com/questions/51678095/syntax-error-when-start-heroku-open
+- https://devcenter.heroku.com/articles/heroku-cli-commands
+- https://stackoverflow.com/questions/5977234/how-can-i-push-a-part-of-my-git-repo-to-heroku
+npm install
+heroku login
+heroku create
+#heroku buildpacks:set heroku/nodejs
+heroku apps:create proj-final-curso-profissional
+- https://stackoverflow.com/questions/18406721/heroku-does-not-appear-to-be-a-git-repository
+heroku git:remote -a proj-final-curso-profissional
+-git push heroku master
+git subtree push --prefix BE heroku master
+
+heroku ps:scale web=1
+heroku logs --tail
+
+- BD MySql
+mysqldump.exe -h localhost -u root -p bdcursoprofissional > \wamp64\www\WebAvançada\BE\config\backupBDCP.sql
+heroku addons:create jawsdb
+heroku config:get JAWSDB_URL
+mysqldump -h remoteHost -u remoteUser -premotePass remoteDBName < \wamp64\www\WebAvançada\BE\config\backupBDCP.sql
+
+npm install
+heroku local
+heroku open cool
