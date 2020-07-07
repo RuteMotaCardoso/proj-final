@@ -1,12 +1,12 @@
 {
-  "name": "backend",
-  "version": "4.2.0",
-  "description": "Web Book FCA",
+  "name": "be",
+  "version": "1.0",
+  "description": "Cursos Profissionais",
   "main": "server.js",
-  "author": "CFP",
+  "author": "RMC",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
-    "body-parser": "^1.16.0",
+    "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",
