@@ -184,7 +184,7 @@ function saveProfessor(req, res) {
                 else {
                     console.log(err);
                     if (err.code == "ER_DUP_ENTRY") {
-                        res.status(jsonMessages.db.duplicateEmail.status).send(jsonMessages.db.duplicateEmail);
+                        res.status(jsonMessages.db.duplicatedRecord.status).send(jsonMessages.db.duplicatedRecord);
                     }
                     else
                         res.status(jsonMessages.db.dbError.status).send(jsonMessages.db.dbError);
@@ -196,6 +196,49 @@ function saveProfessor(req, res) {
     }
 }
 
+function readProfessores(req, res) {
+    const idTurma = req.sanitize('idTurma').escape();
+    const params = [ idTurma ];
+        connect.con.query('SELECT p.idProfessor, p.nome, pt.idTurma, t.nome as turma, t.anoLetivo, t.anoCurso, t.idCursoProfissional '
+        + ' FROM professores p inner join professoresTemTurmas pt on pt.idProfessor = p.idProfessor '
+        + ' inner join turmas t on t.idTurma = pt.idTurma '
+        + ' where t.ativo = 1 and pt.idTurma =? '
+        + ' order by p.idProfessor', params, function(err, rows, fields) {
+        if (err) {
+            console.log(err);
+            res.status(jsonMessages.db.dbError.status).send(jsonMessages.db.dbError);
+        }
+        else {
+            if (rows.length == 0) {
+                res.status(jsonMessages.db.noRecords.status).send(jsonMessages.db.noRecords);
+            }
+            else {
+                console.log(`${rows.length} Registos lidos com sucesso (BD)`);
+                res.send(rows);
+            }
+        }
+    });
+}
+
+function deleteProfessor(req, res) {
+    //console.log(req.body);
+    const idProfessor = req.sanitize('idProfessor').escape();
+    const idTurma = req.sanitize('idTurma').escape();
+    req.checkParams("idProfessor", "Insira um ID Professor válido.").isNumeric();
+    req.checkParams("idTurma", "Insira um ID Turma válido.").isNumeric();
+    const update = [idTurma, idProfessor];
+    const query = connect.con.query('DELETE FROM professoresTemTurmas WHERE idTurma=? AND idProfessor=?', update, function(err, rows, fields) {
+        console.log(query.sql);
+        if (!err) {
+            console.log(`Registo ${idTurma} apagado com sucesso`);
+            res.status(jsonMessages.db.successDeleteU.status).send(jsonMessages.db.successDeleteU);
+        }
+        else {
+            console.log(err);
+            res.status(jsonMessages.db.dbError.status).send(jsonMessages.db.dbError);
+        }
+    });
+}
 
 function readAlunos(req, res) {
     const idTurma = req.sanitize('idTurma').escape();
@@ -219,6 +262,58 @@ function readAlunos(req, res) {
         }
     });
 }
+
+function readDisciplinas(req, res) {
+    const idTurma = req.sanitize('idTurma').escape();
+    const params = [ idTurma ];
+        connect.con.query('SELECT d.idDisciplina, d.nome, d.totalHoras, t.idTurma, t.nome as turma, t.anoLetivo, t.anoCurso, t.idCursoProfissional, cp.codigo as curso, c.nome as componente '
+        + ' FROM turmas t inner join cursosProfissionais cp on t.idCursoProfissional = cp.idCursoProfissional '
+        + ' inner join disciplinas d on d.idCursoProfissional = cp.idCursoProfissional '
+        + ' inner join componentes c on c.idComponente = d.idComponente '
+        + ' where t.ativo = 1 and t.idTurma =? '
+        + ' order by d.idDisciplina', params, function(err, rows, fields) {
+        if (err) {
+            console.log(err);
+            res.status(jsonMessages.db.dbError.status).send(jsonMessages.db.dbError);
+        }
+        else {
+            if (rows.length == 0) {
+                res.status(jsonMessages.db.noRecords.status).send(jsonMessages.db.noRecords);
+            }
+            else {
+                console.log(`${rows.length} Registos lidos com sucesso (BD)`);
+                res.send(rows);
+            }
+        }
+    });
+}
+
+function readModulos(req, res) {
+    const idTurma = req.sanitize('idTurma').escape();
+    const params = [ idTurma ];
+        connect.con.query('SELECT m.idModulo, m.nome, m.horas, t.idTurma, t.nome as turma, t.anoLetivo, t.anoCurso, t.idCursoProfissional, cp.codigo as curso, c.nome as componente '
+        + ' FROM turmas t inner join cursosProfissionais cp on t.idCursoProfissional = cp.idCursoProfissional '
+        + ' inner join disciplinas d on d.idCursoProfissional = cp.idCursoProfissional '
+        + ' inner join modulos m on m.idDisciplina = d.idDisciplina'
+        + ' inner join componentes c on c.idComponente = d.idComponente '
+        + ' where t.ativo = 1 and t.idTurma =? '
+        + ' order by m.idModulo', params, function(err, rows, fields) {
+        if (err) {
+            console.log(err);
+            res.status(jsonMessages.db.dbError.status).send(jsonMessages.db.dbError);
+        }
+        else {
+            if (rows.length == 0) {
+                res.status(jsonMessages.db.noRecords.status).send(jsonMessages.db.noRecords);
+            }
+            else {
+                console.log(`${rows.length} Registos lidos com sucesso (BD)`);
+                res.send(rows);
+            }
+        }
+    });
+}
+
 module.exports = {
     read: read,
     readID: readID,
@@ -228,4 +323,8 @@ module.exports = {
     deleteF: deleteF,
     saveProfessor: saveProfessor,
     readAlunos: readAlunos,
+    readDisciplinas: readDisciplinas,
+    readModulos: readModulos,
+    readProfessores: readProfessores,
+    deleteProfessor: deleteProfessor,
 };

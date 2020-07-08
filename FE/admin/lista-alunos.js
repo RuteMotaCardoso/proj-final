@@ -17,8 +17,6 @@ let isNew = true
     // References to HTML objects   
     const tblAlunos = document.getElementById("tblAlunos")
     const frmAlunos = document.getElementById("frmAlunos")
-  
-
 
     const renderAlunos = async () => {
         frmAlunos.reset()

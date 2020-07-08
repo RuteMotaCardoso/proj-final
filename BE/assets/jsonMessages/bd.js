@@ -65,6 +65,17 @@ module.exports = {
             err_message: "email já existente",
             status: 409,
         },
+        duplicatedRecord: {
+            msg: "duplicatedRecord",
+            message: {
+                eng: "The record already exists!",
+                pt: "O registo já existe na BD!"
+            },
+            success: false,
+            err_code: 2,
+            err_message: "registo já existente",
+            status: 409,
+        },
         requiredData: {
             msg: "dataMissing",
             message: {

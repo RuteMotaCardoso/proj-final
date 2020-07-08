@@ -1,3 +1,10 @@
+-- https://magento.stackexchange.com/questions/140857/how-to-disable-or-remove-foreign-key-before-importing-database-to-phpmyadmin
+SET FOREIGN_KEY_CHECKS = 0;
+-- https://stackoverflow.com/questions/3476765/mysql-drop-all-tables-ignoring-foreign-keys
+SELECT concat('DROP TABLE IF EXISTS `', table_name, '`;')
+FROM information_schema.tables
+WHERE table_schema = 'bdcursoprofissional';
+
 create database bdcursoprofissional;
 
 -- MySQL Workbench Forward Engineering
@@ -253,7 +260,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `bdcursoprofissional`.`avaliacoes_modulos`
 -- -----------------------------------------------------
+DROP TABLE `bdcursoprofissional`.`avaliacoesModulos`;
 CREATE TABLE IF NOT EXISTS `bdcursoprofissional`.`avaliacoesModulos` (
+  `idAvaliacoesModulos` INT NOT NULL AUTO_INCREMENT,
   `idProfessor` INT NOT NULL,
   `idAluno` INT NOT NULL,
   `idModulo` INT NOT NULL,
@@ -262,7 +271,8 @@ CREATE TABLE IF NOT EXISTS `bdcursoprofissional`.`avaliacoesModulos` (
   `dataAvaliacao` DATE NULL,
   `aprovado` TINYINT NULL,
   `ativo` TINYINT NOT NULL DEFAULT 1,
-  PRIMARY KEY (`idProfessor`, `idAluno`, `idModulo`),
+  PRIMARY KEY(`idAvaliacoesModulos`),
+  UNIQUE KEY (`idProfessor`,`idAluno`,`idModulo`),
   INDEX `fkProfessores_hasAlunosAlunos1_idx` (`idAluno` ASC) ,
   INDEX `fkProfessores_hasAlunosProfessores1_idx` (`idProfessor` ASC) ,
   INDEX `fk_avaliacoes_modulos_modulos1_idx` (`idModulo` ASC) ,

@@ -96,7 +96,7 @@ function save(req, res) {
                 else {
                     console.log(err);
                     if (err.code == "ER_DUP_ENTRY") {
-                        res.status(jsonMessages.db.duplicateEmail.status).send(jsonMessages.db.duplicateEmail);
+                        res.status(jsonMessages.db.duplicatedRecord.status).send(jsonMessages.db.duplicatedRecord);
                     }
                     else
                         res.status(jsonMessages.db.dbError.status).send(jsonMessages.db.dbError);
@@ -137,7 +137,7 @@ function update(req, res) {
         return;
     }
     else {
-        console.log(idModulo);
+        console.log(idAvaliacoesModulos);
         //const idProfessor = req.body.idProfessor;
         if (idProfessor != "NULL" && idAluno != "NULL" && typeof(avaliacao) != 'undefined' && typeof(faltas) != 'undefined' && typeof(dataAvaliacao) != 'undefined' && typeof(aprovado) != 'undefined') {
             const update = [idProfessor, idAluno, idModulo, avaliacao, faltas, dataAvaliacao, aprovado, idAvaliacoesModulos];
@@ -158,11 +158,46 @@ function update(req, res) {
     }
 }
 
+
+function deleteL(req, res) {
+    //console.log(req.body);
+    const idModulo = req.sanitize('id').escape();
+    const update = [0, idModulo];
+    const query = connect.con.query('UPDATE avaliacoesModulos SET ativo = ? WHERE idAvaliacoesModulos=?', update, function(err, rows, fields) {
+        console.log(query.sql);
+        if (!err) {
+            console.log(`Registo ${idModulo} desativado com sucesso`);
+            res.status(jsonMessages.db.successDelete.status).send(jsonMessages.db.successDelete);
+        }
+        else {
+            console.log(err);
+
+            res.status(jsonMessages.db.dbError.status).send(jsonMessages.db.dbError);
+        }
+    });
+}
+
+function deleteF(req, res) {
+    //console.log(req.body);
+    const idModulo = req.sanitize('id').escape();
+    const update = idModulo;
+    const query = connect.con.query('DELETE FROM avaliacoesModulos WHERE idAvaliacoesModulos=?', update, function(err, rows, fields) {
+        console.log(query.sql);
+        if (!err) {
+            console.log(`Registo ${idModulo} apagado com sucesso`);
+            res.status(jsonMessages.db.successDeleteU.status).send(jsonMessages.db.successDeleteU);
+        }
+        else {
+            console.log(err);
+            res.status(jsonMessages.db.dbError.status).send(jsonMessages.db.dbError);
+        }
+    });
+}
 module.exports = {
     read: read,
     readIDTurma: readIDTurma,
     save: save,
     update: update,
-    //deleteL: deleteL,
-    //deleteF: deleteF,
+    deleteL: deleteL,
+    deleteF: deleteF,
 };

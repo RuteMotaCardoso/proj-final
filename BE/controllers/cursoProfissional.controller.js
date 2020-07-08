@@ -216,7 +216,7 @@ function saveParticipant(req, res) {
                 else {
                     console.log(err);
                     if (err.code == "ER_DUP_ENTRY") {
-                        res.status(jsonMessages.db.duplicateEmail.status).send(jsonMessages.db.duplicateEmail);
+                        res.status(jsonMessages.db.duplicatedRecord.status).send(jsonMessages.db.duplicatedRecord);
                     }
                     else
                         res.status(jsonMessages.db.dbError.status).send(jsonMessages.db.dbError);

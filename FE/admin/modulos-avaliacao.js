@@ -13,6 +13,8 @@ let isNew = true
       window.location.replace("../index.html")  
     });
   
+    // Valida máximo data atual
+    document.getElementById("txtDataAvaliacao").max = new Date().toISOString().split("T")[0];
 
     // References to HTML objects   
     const selDisciplinas = document.getElementById("selDisciplinas")
@@ -22,26 +24,35 @@ let isNew = true
     const selAprovado = document.getElementById("selAprovado")
     const tblAvaliacoes = document.getElementById("tblAvaliacoes")
     const frmAvaliacoes = document.getElementById("frmAvaliacoes")
-  
+
+    // Ir buscar o nome por Id em vez do 1º
+    const idTurma = getParameterByName("idTurma")
+    console.log(idTurma)
+    
+
+    // Carregamento hierárquico dos módulos com base na disciplina seleccionada
+    selDisciplinas.onchange = async (result) => {
+        const idDisciplina = selDisciplinas.options[selDisciplinas.selectedIndex].value
+        selModulos.innerHTML = await getModulosDisciplina(idDisciplina);
+    }
 
 //***********************************************************************************************************************/
 //FORMULÁRIO
 //***********************************************************************************************************************/
     frmAvaliacoes.addEventListener("submit", async (event) => {
         event.preventDefault()
-        const txtIdTurma = document.getElementById("txtIdTurma").value
         const txtTurma = document.getElementById("txtTurma").value
         //const txtNome = document.getElementById("txtNome").value
         //const txtIdade = document.getElementById("txtIdade").value
         const idAluno = selAlunos.options[selAlunos.selectedIndex].value
         const idProfessor = selProfessores.options[selProfessores.selectedIndex].value
-        const idDisciplina = selDisciplinas.options[selDisciplinas.selectedIndex].value
         const idModulo = selModulos.options[selModulos.selectedIndex].value
         const txtAvaliacao = document.getElementById("txtAvaliacao").value
         const txtFaltas = document.getElementById("txtFaltas").value
         const txtDataAvaliacao = document.getElementById("txtDataAvaliacao").value
         //const txtAprovado = document.getElementById("txtAprovado").value
         const valAprovado = selAprovado.options[selAprovado.selectedIndex].value
+        let txtIdAvaliacao = document.getElementById("txtIdAvaliacao").value
 
         console.log(txtDataAvaliacao.value)
         //let txtIdAluno = document.getElementById("txtIdAluno").value
@@ -61,7 +72,7 @@ let isNew = true
             await trataResposta(response);
         } else {
             // Atualiza
-            response = await fetch(`${urlBase}/modulosAvaliacoes`, {
+            response = await fetch(`${urlBase}/modulosAvaliacoes/${txtIdAvaliacao}`, {
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded"
                 },
@@ -72,17 +83,13 @@ let isNew = true
             await trataResposta(response);
         }
         isNew = true
-        renderAlunos()
+        renderModulosAvaliacao()
     })
 
 
 
-    const renderAlunos = async () => {
+    const renderModulosAvaliacao = async () => {
         frmAvaliacoes.reset()
-
-    // TODO: Ir buscar o nome por Id em vez do 1º
-    const idTurma = getParameterByName("idTurma")
-    console.log(idTurma)
 
     const responseT = await fetch(`${urlBase}/turmas/${idTurma}`)
     const turma = await responseT.json()
@@ -117,10 +124,10 @@ let isNew = true
         //APRESENTAR LISTA
 
         //***********************************************************************************************************************/
-        selAlunos.innerHTML = await getAlunos()
+        selAlunos.innerHTML = await getAlunosTurma(idTurma)
         selProfessores.innerHTML = await getProfessores()
         selDisciplinas.innerHTML = await getDisciplinas()
-        selModulos.innerHTML = await getModulos()
+        //selModulos.innerHTML = await getModulos()
 
         const response = await fetch(`${urlBase}/modulosAvaliacoes/${idTurma}`)
         const avaliacoes = await response.json()
@@ -138,8 +145,8 @@ let isNew = true
                     <td>${avaliacao.faltas}</td>
                     <td>${converteSimNao(avaliacao.aprovado)}</td>
                     <td>
-                        <i id='${avaliacao.idAluno}' class='fas fa-edit edit'></i>
-                        <i id='${avaliacao.idAluno}' class='fas fa-trash-alt remove'></i>
+                        <i id='${avaliacao.idAvaliacoesModulos}' class='fas fa-edit edit'></i>
+                        <i id='${avaliacao.idAvaliacoesModulos}' class='fas fa-trash-alt remove'></i>
                     </td>
                 </tr>
             `
@@ -204,19 +211,29 @@ let isNew = true
                     cancelButtonColor: '#d33',
                     cancelButtonText: 'Cancelar',
                     confirmButtonText: 'Remover'
-                }).then( () => {
-                    let idAluno = btnDelete[i].getAttribute("id")  //não mudar
-                    let posApagar = alunos.findIndex(x => x.idAluno == idAluno);
-                    if (posApagar >= 0) {
-                        alunos.splice(posApagar, 1);
-                        swal('Removido!', 'O aluno foi removido da turma do curso profissional.', 'success')
-                    } else {
-                        swal('Erro!', 'O aluno não foi encontrado na turma do curso profissional.', 'error')
+                }).then(async (result) => {
+                    if (result.value) {
+                        let idModuloAvaliacao = btnDelete[i].getAttribute("id")  //não mudar
+                        try {
+                            console.log(idModuloAvaliacao);
+                            const response = await fetch(`${urlBase}/modulosAvaliacao/del/${idModuloAvaliacao}`, {
+                                method: "PUT"
+                            })
+                            if (response.status == 204) {
+                                swal('Removido!', 'A avaliação do módulo foi removida do curso profissional.', 'success')
+                            }
+                        } catch (err) {
+                            swal({
+                                type: 'error',
+                                title: 'Erro',
+                                text: err
+                            })
+                        }
+                        renderModulosAvaliacao()
                     }
-                    renderAlunos()
                 })
             })
         }
     }
-    renderAlunos()
+    renderModulosAvaliacao()
 }

@@ -17,7 +17,7 @@ else {
 	});
 	sqlCon = localSql;
 }
-console.log(sqlCon);
+console.log("DB Host:\t" + sqlCon.config.host);
 
 module.exports = {
 	con:sqlCon

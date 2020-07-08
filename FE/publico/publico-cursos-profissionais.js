@@ -1,18 +1,4 @@
-const urlBase = "https://fcawebbook.herokuapp.com"
 let isNew = true
-
-
-//***********************************************************************************************************************/
-//ARRAY COM LISTA DE TIPOS CURSOS PROFISSIONAIS
-
-//***********************************************************************************************************************/
-var cursosProfissionais = [
-    {"idCursoProfissional":1,"nome":"Técnico de Gestão de Equipamentos Informáticos","codigo":"TGEI","totalHoras":"3000","active":null},
-    {"idCursoProfissional":2,"nome":"Técnico de Gestão de Websites","codigo":"TGWS","totalHoras":"3000","active":null},
-    {"idCursoProfissional":3,"nome":"Técnico de Gestão de Bases de Dados","codigo":"TGBD","totalHoras":"3000","active":null},
-    {"idCursoProfissional":4,"nome":"Técnico de Gestão de Redes","codigo":"TGRE","totalHoras":"3000","active":null},
-]
-
 
  window.onload = () => {
 
@@ -23,44 +9,7 @@ var cursosProfissionais = [
 
 //***********************************************************************************************************************/
 //FORMULÁRIO DE TIPOS DE CURSOS PROFISSIONAIS 
-
 //***********************************************************************************************************************/
-    frmCP.addEventListener("submit", async (event) => {
-        event.preventDefault()
-        const txtNome = document.getElementById("txtNome").value
-        const txtCodigo = document.getElementById("txtCodigo").value
-        const txtTotalHoras = document.getElementById("txtTotalHoras").value
-        let txtIdCursoProfissional = document.getElementById("txtIdCursoProfissional").value
-        if (txtIdCursoProfissional === "")
-            txtIdCursoProfissional = cursosProfissionais.length+1;
-
-        // Verifica flag isNew para saber se se trata de uma adição ou de um atualização dos dados
-        let response
-        if (isNew) {
-            // Adiciona
-            const newCP = {
-                "idCursoProfissional":txtIdCursoProfissional,
-                "nome":txtNome,
-                "codigo":txtCodigo,
-                "totalHoras":txtTotalHoras
-             };
-             cursosProfissionais.push(newCP);
-        } else {
-            // Atualiza
-            const newCP= {
-                "idCursoProfissional":txtIdCursoProfissional,
-                "nome":txtNome,
-                "codigo":txtCodigo,
-                "totalHoras":txtTotalHoras
-             };
-            let posEditar = cursosProfissionais.findIndex(x => x.idCursoProfissional == txtIdCursoProfissional);
-            cursosProfissionais[posEditar] = newCP;
-        }
-        isNew = true
-        renderCP()
-    })
-
-
 
     const renderCP = async () => {
         frmCP.reset()
@@ -85,7 +34,8 @@ var cursosProfissionais = [
         //APRESENTAR LISTA
 
         //***********************************************************************************************************************/
-        const cursos = cursosProfissionais;
+        const response = await fetch(`${urlBase}/cursosProfissionais`)
+        const cursos = await response.json()
         let i = 1
         for (const curso of cursos) {
             strHtml += `
@@ -119,37 +69,6 @@ var cursosProfissionais = [
                         return false;
                     }
                 }
-            })
-        }
-
-        //***********************************************************************************************************************/
-        //REMOVER REGISTOS DA LISTA
-
-        //***********************************************************************************************************************/
-        // Gerir o clique no ícone de Remover        
-        const btnDelete = document.getElementsByClassName("remove")
-        for (let i = 0; i < btnDelete.length; i++) {
-            btnDelete[i].addEventListener("click", () => {
-                swal({
-                    title: 'Tem a certeza?',
-                    text: "Não será possível reverter a remoção!",
-                    type: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    cancelButtonText: 'Cancelar',
-                    confirmButtonText: 'Remover'
-                }).then( () => {
-                    let idCursoProfissional = btnDelete[i].getAttribute("id")  //não mudar
-                    let posApagar = cursosProfissionais.findIndex(x => x.idCursoProfissional == idCursoProfissional);
-                    if (posApagar >= 0) {
-                        cursosProfissionais.splice(posApagar, 1);
-                        swal('Removido!', 'O tipo de curso profissional foi removido da lista.', 'success')
-                    } else {
-                        swal('Erro!', 'O tipo de curso profissional não foi encontrado na lista.', 'error')
-                    }
-                    renderCP()
-                })
             })
         }
     }

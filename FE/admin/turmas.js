@@ -105,6 +105,7 @@ let isNew = true
                     <td>
                         <i id='${turma.idTurma}' class='fas fa-eye ver'></i>
                         <i id='${turma.idTurma}' class='fas fa-graduation-cap aval'></i>
+                        <i id='${turma.idTurma}' class='fas fa-fw fa-user prof'></i>
                         <i id='${turma.idTurma}' class='fas fa-edit edit'></i>
                         <i id='${turma.idTurma}' class='fas fa-trash-alt remove'></i>
                     </td>
@@ -163,7 +164,7 @@ let isNew = true
         for (let i = 0; i < btnAval.length; i++) {
             btnAval[i].addEventListener("click", () => {
                 for (const turma of turmas) {
-                    if (turma.idTurma == btnEdit[i].getAttribute("id")) {  //não mudar
+                    if (turma.idTurma == btnAval[i].getAttribute("id")) {  //não mudar
                         document.location="modulos-avaliacao.html?idTurma=" + turma.idTurma;
                         return false;
                     }
@@ -171,6 +172,19 @@ let isNew = true
             })
         }
 
+        // Gerir o clique no ícone de Avaliações        
+        const btnProf = document.getElementsByClassName("prof")
+        for (let i = 0; i < btnProf.length; i++) {
+            btnProf[i].addEventListener("click", () => {
+                for (const turma of turmas) {
+                    if (turma.idTurma == btnProf[i].getAttribute("id")) {  //não mudar
+                        document.location="professores-turmas.html?idTurma=" + turma.idTurma;
+                        return false;
+                    }
+                }
+            })
+        }
+        
 
         //***********************************************************************************************************************/
         //REMOVER REGISTOS DA LISTA

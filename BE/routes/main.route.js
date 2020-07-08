@@ -49,6 +49,8 @@ router.get('/modulosAvaliacoes/', controllerModuloAvaliacao.read);
 router.get('/modulosAvaliacoes/:idTurma', controllerModuloAvaliacao.readIDTurma);
 router.post('/modulosAvaliacoes/', isLoggedIn, controllerModuloAvaliacao.save);
 router.put('/modulosAvaliacoes/:id', isLoggedIn, isLoggedIn, controllerModuloAvaliacao.update);
+router.put('/modulosAvaliacoes/del/:id', isLoggedIn, controllerModuloAvaliacao.deleteL);
+router.delete('/modulosAvaliacoes/:id', isLoggedIn, controllerModuloAvaliacao.deleteF);
 
 router.get('/turmas/', controllerTurma.read);
 router.get('/turmas/:id', controllerTurma.readID);
@@ -56,8 +58,12 @@ router.post('/turmas/', isLoggedIn, controllerTurma.save);
 router.put('/turmas/:id', isLoggedIn, isLoggedIn, controllerTurma.update);
 router.put('/turmas/del/:id', isLoggedIn, controllerTurma.deleteL);
 router.delete('/turmas/:id', isLoggedIn, controllerTurma.deleteF);
-router.post('/turmas/:idTurma/professor/:idProfessor', isLoggedIn, controllerTurma.saveProfessor);
+router.post('/turmas/:idTurma/professores/:idProfessor', isLoggedIn, controllerTurma.saveProfessor);
+router.put('/turmas/:idTurma/professores/del/:idProfessor', isLoggedIn, controllerTurma.deleteProfessor);
+router.get('/turmas/:idTurma/professores/', controllerTurma.readProfessores);
 router.get('/turmas/:idTurma/alunos/', controllerTurma.readAlunos);
+router.get('/turmas/:idTurma/disciplinas/', controllerTurma.readDisciplinas);
+router.get('/turmas/:idTurma/modulos/', controllerTurma.readModulos);
 
 router.get('/professores/', controllerProfessor.read);
 router.get('/professores/:id', controllerProfessor.readID);

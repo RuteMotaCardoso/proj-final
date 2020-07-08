@@ -68,8 +68,33 @@ async function getModulos() {
     return strHtmlSel
 }
 
+async function getModulosDisciplina(idDisciplina) {
+    const responseModulos = await fetch(`${urlBase}/disciplinas/${idDisciplina}/modulos`)
+    const modulos = await responseModulos.json()
+    let strHtmlSel = ""
+    for (const modulo of modulos) {
+        strHtmlSel += `
+            <option value="${modulo.idModulo}">${modulo.nome}</option>
+        `
+    }
+    return strHtmlSel
+}
+
+
 async function getAlunos() {
     const responseAlunos = await fetch(`${urlBase}/alunos`)
+    const alunos = await responseAlunos.json()
+    let strHtmlSel = ""
+    for (const aluno of alunos) {
+        strHtmlSel += `
+            <option value="${aluno.idAluno}">${aluno.nome}</option>
+        `
+    }
+    return strHtmlSel
+}
+
+async function getAlunosTurma(idTurma) {
+    const responseAlunos = await fetch(`${urlBase}/turmas/${idTurma}/alunos`)
     const alunos = await responseAlunos.json()
     let strHtmlSel = ""
     for (const aluno of alunos) {
@@ -119,7 +144,15 @@ async function trataResposta(response) {
                 text: respostaApi.message.pt
             });
         }
-        else {
+        else if (respostaApi.status == 409 || respostaApi.msg == "duplicatedRecord") {
+            swal({
+                type: 'error',
+                title: 'Erro',
+                text: respostaApi.message.pt
+            });
+        }
+        else
+        {
             swal({
                 type: 'error',
                 title: `Erro (${respostaApi[0].value})`,

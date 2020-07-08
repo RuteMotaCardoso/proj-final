@@ -78,7 +78,7 @@
           </a>
         </li>
   
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="turmas.html">
           <i class="fas fa-fw fa-users"></i>
           <span>Turmas</span>
@@ -99,12 +99,6 @@
       </a>
     </li>
 
-    <li class="nav-item active">
-      <a class="nav-link" href="modulos-avaliacao.html">
-      <i class="fas fa-graduation-cap"></i>
-      <span>Avaliações</span>
-      </a>
-    </li>
   </ul>
     
 
@@ -116,12 +110,11 @@
         <div class="container-fluid">
 
           <div class="jumbotron">
-            <h1 class="display-3">Avaliações de uma Turma de Cursos Profissionais</h1>
-            <p class="lead">Listagem de Avaliações de uma Turma de Cursos Profissionais da Escola Profissional do Futuro</p>
+            <h1 class="display-3">Professores de uma Turma de Cursos Profissionais</h1>
+            <p class="lead">Listagem de Professores de uma Turma de Cursos Profissionais da Escola Profissional do Futuro</p>
             <hr class="my-2">
-            <form id="frmAvaliacoes">   <!--    ****************************aqui!!   *****************-->
-                <input type="hidden" id="txtIdAvaliacao">
-
+            <form id="frmProfessoresTurmas">   <!--    ****************************aqui!!   *****************-->
+                <input type="hidden" id="txtIdProfessorTurma">
                 
                 <div class="row" >    
                     <div class="form-group col">
@@ -146,13 +139,7 @@
                   </div>
 
 <!--    **************************** LANÇAR AVALIAÇÃO AO MÓDULO   *****************-->
-                  <input type="hidden" id="txtIdAluno">
                   <div class="row" >                        
-                    <div class="form-group col">
-                        <label for="inputName">Nome de Aluno</label>
-                        <input type="text" placeholder="nome de aluno" class="form-control" id="txtNome" style="display: none;">
-                        <select placeholder="tipo" class="form-control" id="selAlunos" required></select>  
-                      </div>
                     <div class="form-group col">
                       <label for="inputName">Nome de Professor</label>
                       <input type="text" placeholder="nome de professor" class="form-control" id="txtProfessor" style="display: none;">
@@ -160,49 +147,10 @@
                     </div>
                 </div>
 
-                <div class="row" >                        
-                  <div class="form-group col">
-                      <label for="inputName">Disciplina</label>
-                      <input type="text" placeholder="disciplina" class="form-control" id="txtDisciplina" style="display: none;">
-                      <select placeholder="tipo" class="form-control" id="selDisciplinas" required></select>  
-                    </div>
-
-                  <div class="form-group col">
-                      <label for="inputName">Módulo</label>
-                      <input type="text" placeholder="nome do módulo" class="form-control" id="txtModulo" style="display: none;">
-                      <select placeholder="tipo" class="form-control" id="selModulos" required></select>  
-                    </div>
-                </div>
-
-
-                <div class="row" >                        
-                  <div class="form-group col">
-                      <label for="inputName"><strong>Número de faltas</strong></label>
-                      <input type="number" placeholder="número de faltas" class="form-control" id="txtFaltas" name="Nº Faltas" min="0" max="50" required>
-                  </div>
-
-                  <div class="form-group col">
-                      <label for="inputName"><strong>Avaliação</strong></label>
-                      <input type="number" placeholder="avaliação" class="form-control" id="txtAvaliacao" name="avaliação" min="1" max="20" required>
-                  </div>
-                  <div class="form-group col">
-                    <label for="inputName"><strong>Data de Avaliação</strong></label>
-                    <input type="date" placeholder="data de avaliação" class="form-control" id="txtDataAvaliacao" name="data Avaliação" required>
-                  </div>
-                  <div class="form-group col">
-                    <label for="inputName"><strong>Aprovado</strong></label>
-                    <input type="text" placeholder="aprovado" class="form-control" id="txtAprovado" style="display: none;">
-                    <select placeholder="tipo" class="form-control" id="selAprovado" required>
-                      <option value="1">Sim</option>
-                      <option value="0">Não</option>
-                    </select> 
-                  </div>
-                </div>
-
               <!--   BOTÕES DA PÁGINA PRINCIPAL  -->            
               <div class="form-row">
                 <div class="form-group col-md-12">
-                    <button type="submit" class="btn btn-primary mb-2">Guardar Avaliação</button>
+                    <button type="submit" class="btn btn-primary mb-2">Associar Professor</button>
                     <button type="reset" class="btn btn-primary mb-2">Limpar valores</button>
                 </div>
               </div>
@@ -211,10 +159,10 @@
           
             
 <!--   LISTA DA PÁGINA PRINCIPAL  -->                    
-           <div id="divAvaliacoes" class="container">    
+           <div id="divProfessoresTurmas" class="container">    
                 <!-- Table -->
                 <div class="table-responsive">
-                    <table id="tblAvaliacoes" class="table table-sm">  <!--    ****************************aqui!!   *****************-->
+                    <table id="tblProfessoresTurmas" class="table table-sm">  <!--    ****************************aqui!!   *****************-->
                     </table>
                 </div>
             </div>
@@ -267,7 +215,7 @@
 <!--  **************************************************** --> 
 <!-- Custom scripts for all pages-->
   <script src="../js/common.js"></script>
-  <script src="modulos-avaliacao.js"></script>
+  <script src="professores-turmas.js"></script>
 
 
   </body>

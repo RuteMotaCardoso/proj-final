@@ -251,14 +251,14 @@ function myMap() {
   
     // Janela de informação (info window)
   const infowindow = new google.maps.InfoWindow({
-    content: "É aqui a WebConference!"
+    content: "É aqui a Escola do Futuro!"
   })
 
   // Marcador
   const marker = new google.maps.Marker({
-    position:porto,
+    position:vfx,
     map:map,
-    title:"WebConference"
+    title:"Escola do Futuro"
   })
 
   // Listener
