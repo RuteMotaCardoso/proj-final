@@ -4,7 +4,7 @@ const jsonMessages = require(jsonMessagesPath + "bd");
 const connect = require('../config/connectMySQL');
 
 function read(req, res) {
-    connect.con.query('SELECT ma.idProfessor, ma.idAluno, ma.idModulo, ma.avaliacao, ma.faltas, ma.dataAvaliacao, ma.aprovado, '
+    connect.con.query('SELECT ma.idAvaliacoesModulos, ma.idProfessor, ma.idAluno, ma.idModulo, ma.avaliacao, ma.faltas, ma.dataAvaliacao, ma.aprovado, '
         + ' a.nome as aluno, p.nome as professor, d.nome as disciplina, m.nome as modulo '
         + ' FROM avaliacoesModulos ma inner join modulos m on ma.idModulo = m.idModulo '
         + ' inner join disciplinas d on m.idDisciplina = d.idDisciplina '
@@ -32,7 +32,7 @@ function readIDTurma(req, res) {
     const idTurma = req.sanitize('idTurma').escape();
     const post = [ idTurma ];
     // https://stackoverflow.com/questions/51899725/mysql-fetch-date-without-timezone-offset
-    connect.con.query('SELECT ma.idProfessor, ma.idAluno, ma.idModulo, ma.avaliacao, ma.faltas, date(ma.dataAvaliacao) as dataAvaliacao, ma.aprovado, '
+    connect.con.query('SELECT ma.idAvaliacoesModulos, ma.idProfessor, ma.idAluno, ma.idModulo, ma.avaliacao, ma.faltas, date(ma.dataAvaliacao) as dataAvaliacao, ma.aprovado, '
         + ' a.nome as aluno, p.nome as professor, d.nome as disciplina, m.nome as modulo '
         + ' FROM avaliacoesModulos ma inner join modulos m on ma.idModulo = m.idModulo '
         + ' inner join disciplinas d on m.idDisciplina = d.idDisciplina '
@@ -119,6 +119,7 @@ function update(req, res) {
     const dataAvaliacao = req.sanitize('dataAvaliacao').escape();
     const aprovado = req.sanitize('aprovado').escape();
     const idModulo = req.sanitize('idModulo').escape();
+    const idAvaliacoesModulos = req.sanitize('id').escape();
     req.checkBody("idModulo", "Insira um ID módulo válido.").isNumeric();
     //req.checkBody("idModulo", "Insira um ID Modulo válido.").isNumeric();
     req.checkBody("idProfessor", "Insira um ID Professor válido.").isNumeric();
@@ -128,6 +129,7 @@ function update(req, res) {
     //req.checkBody("dataAvaliacao", "Insira uma data válida").matches(/^([0-2][0-9]|(3)[0-1])([\/-])(((0)[0-9])|((1)[0-2]))([\/-])\d{4}$/i);
     req.checkBody("dataAvaliacao", "Insira uma data válida").isISO8601('yyyy-mm-dd')
     req.checkBody("aprovado", "Insira aprovado válido").isNumeric();
+    req.checkParams("id", "Insira um ID de Avaliação válido").isNumeric();
 
     const errors = req.validationErrors();
     if (errors) {
@@ -138,8 +140,8 @@ function update(req, res) {
         console.log(idModulo);
         //const idProfessor = req.body.idProfessor;
         if (idProfessor != "NULL" && idAluno != "NULL" && typeof(avaliacao) != 'undefined' && typeof(faltas) != 'undefined' && typeof(dataAvaliacao) != 'undefined' && typeof(aprovado) != 'undefined') {
-            const update = [avaliacao, faltas, dataAvaliacao, aprovado, idProfessor, idAluno, idModulo];
-            const query = connect.con.query('UPDATE avaliacoesModulos SET avaliacao =?, faltas =?, dataAvaliacao =? WHERE idProfessor =?, idAluno =?, idModulo =?', update, function(err, rows, fields) {
+            const update = [idProfessor, idAluno, idModulo, avaliacao, faltas, dataAvaliacao, aprovado, idAvaliacoesModulos];
+            const query = connect.con.query('UPDATE avaliacoesModulos SET idProfessor =?, idAluno =?, idModulo =?, avaliacao =?, faltas =?, dataAvaliacao =? WHERE idAvaliacoesModulos =?', update, function(err, rows, fields) {
                 console.log(query.sql);
                 if (!err) {
                     console.log(`Registo ${idModulo} atualizado com sucesso`);
