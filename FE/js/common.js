@@ -1,4 +1,5 @@
-const urlBase = "http://127.0.0.1:8080"
+//const urlBase = "http://127.0.0.1:8080"
+const urlBase = "https://proj-final-curso-profissional.herokuapp.com"
 
 function selectTextOption(options, searchtext) {
     for (var i = 0; i < options.length; ++i) {
