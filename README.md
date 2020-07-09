@@ -31,7 +31,7 @@ A estrutura do site e navegação permitem o acesso a alguns ecrãs por vários 
 ## Funcionamento
 O site pode funcionar localmente ou com o BE remotamente no Heroku. Para funcionar localmente, o site necessita que seja criada a BD BDCursoProfissional (em MySql ou MariaDB) através do script ou do dump. Neste caso, o ficheiro js/common.js no FE deve apontar para o URL local onde se encontra o BE (p. ex: http://127.0.0.1:8080). Da mesma forma o ficheiro config/connectMySQL.js deve conter a connection string para a BD (root:@localhost,bdcursoprofissional).
 
-Para funcionar com o BE remotamente, o ficheiro js/common.js no FE deve apontar para o URL https://proj-final-curso-profissional.herokuapp.com, onde o BE está a executar remotamente, sendo a connection string configurada pela variável de ambiente JAWSDB_URL (caso esta variável não exista, é assumido que a BD existe localmente).
+Para funcionar com o BE remotamente, o ficheiro js/common.js no FE deve apontar para o URL https://proj-final-curso-profissional.herokuapp.com, onde o BE está a executar, sendo a connection string configurada pela variável de ambiente JAWSDB_URL (caso esta variável não exista, é assumido que a BD existe localmente).
 
 ## Elementos de Entrega
 * Ficheiros de Back-end e Front-end
