@@ -11,7 +11,7 @@ function selectTextOption(options, searchtext) {
 async function getCursos() {
     const responseCurso = await fetch(`${urlBase}/cursosProfissionais`)
     const cursos = await responseCurso.json()
-    let strHtmlSel = ""
+    let strHtmlSel = `<option value="">Selecione uma opção</option>`
     for (const curso of cursos) {
         strHtmlSel += `
             <option value="${curso.idCursoProfissional}">${curso.codigo}</option>
@@ -24,7 +24,7 @@ async function getCursos() {
 async function getComponentes() {
     const responseComp = await fetch(`${urlBase}/componentes`)
     const componentes = await responseComp.json()
-    let strHtmlSel = ""
+    let strHtmlSel = `<option value="">Selecione uma opção</option>`
     for (const comp of componentes) {
         strHtmlSel += `
             <option value="${comp.idComponente}">${comp.nome}</option>
@@ -36,7 +36,7 @@ async function getComponentes() {
 async function getTurmas() {
     const responseTurmas = await fetch(`${urlBase}/turmas`)
     const turmas = await responseTurmas.json()
-    let strHtmlSel = ""
+    let strHtmlSel = `<option value="">Selecione uma opção</option>`
     for (const turma of turmas) {
         strHtmlSel += `
             <option value="${turma.idTurma}">${turma.nome}</option>
@@ -48,7 +48,7 @@ async function getTurmas() {
 async function getDisciplinas() {
     const responseDisciplinas = await fetch(`${urlBase}/disciplinas`)
     const disciplinas = await responseDisciplinas.json()
-    let strHtmlSel = ""
+    let strHtmlSel = `<option value="">Selecione uma opção</option>`
     for (const disciplina of disciplinas) {
         strHtmlSel += `
             <option value="${disciplina.idDisciplina}">${disciplina.nome}</option>
@@ -60,7 +60,7 @@ async function getDisciplinas() {
 async function getModulos() {
     const responseModulos = await fetch(`${urlBase}/modulos`)
     const modulos = await responseModulos.json()
-    let strHtmlSel = ""
+    let strHtmlSel = `<option value="">Selecione uma opção</option>`
     for (const modulo of modulos) {
         strHtmlSel += `
             <option value="${modulo.idModulo}">${modulo.nome}</option>
@@ -72,7 +72,7 @@ async function getModulos() {
 async function getModulosDisciplina(idDisciplina) {
     const responseModulos = await fetch(`${urlBase}/disciplinas/${idDisciplina}/modulos`)
     const modulos = await responseModulos.json()
-    let strHtmlSel = ""
+    let strHtmlSel = `<option value="">Selecione uma opção</option>`
     for (const modulo of modulos) {
         strHtmlSel += `
             <option value="${modulo.idModulo}">${modulo.nome}</option>
@@ -85,7 +85,7 @@ async function getModulosDisciplina(idDisciplina) {
 async function getAlunos() {
     const responseAlunos = await fetch(`${urlBase}/alunos`)
     const alunos = await responseAlunos.json()
-    let strHtmlSel = ""
+    let strHtmlSel = `<option value="">Selecione uma opção</option>`
     for (const aluno of alunos) {
         strHtmlSel += `
             <option value="${aluno.idAluno}">${aluno.nome}</option>
@@ -97,7 +97,7 @@ async function getAlunos() {
 async function getAlunosTurma(idTurma) {
     const responseAlunos = await fetch(`${urlBase}/turmas/${idTurma}/alunos`)
     const alunos = await responseAlunos.json()
-    let strHtmlSel = ""
+    let strHtmlSel = `<option value="">Selecione uma opção</option>`
     for (const aluno of alunos) {
         strHtmlSel += `
             <option value="${aluno.idAluno}">${aluno.nome}</option>
@@ -109,7 +109,7 @@ async function getAlunosTurma(idTurma) {
 async function getProfessores() {
     const responseProfessores = await fetch(`${urlBase}/professores`)
     const professores = await responseProfessores.json()
-    let strHtmlSel = ""
+    let strHtmlSel = `<option value="">Selecione uma opção</option>`
     for (const professor of professores) {
         strHtmlSel += `
             <option value="${professor.idProfessor}">${professor.nome}</option>
