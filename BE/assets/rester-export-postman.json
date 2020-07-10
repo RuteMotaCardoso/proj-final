@@ -4864,6 +4864,62 @@
                             "name": "Listar",
                             "response": [
                                 {
+                                    "id": "rester-348",
+                                    "name": "2020-07-08T09:27:13.003Z Listar",
+                                    "originalRequest": {
+                                        "url": "127.0.0.1:8080/modulos",
+                                        "method": "GET",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            }
+                                        ]
+                                    },
+                                    "responseTime": 279.2899999767542,
+                                    "header": [
+                                        {
+                                            "key": "X-Powered-By",
+                                            "value": "Express"
+                                        },
+                                        {
+                                            "key": "Access-Control-Allow-Origin",
+                                            "value": "*"
+                                        },
+                                        {
+                                            "key": "Access-Control-Expose-Headers",
+                                            "value": "Location"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json; charset=utf-8"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "22034"
+                                        },
+                                        {
+                                            "key": "ETag",
+                                            "value": "W/\"5612-0lQUtkhBJVxiMCP7CV0GWdxpWPA\""
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Wed, 08 Jul 2020 09:27:13 GMT"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "body": "[{\"idModulo\":12,\"numero\":1,\"nome\":\"Textos Medievais: líricos e narrativos\",\"totalHoras\":32,\"limiteFaltas\":3,\"anoCurso\":1,\"idDisciplina\":24,\"disciplina\":\"Português\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":13,\"numero\":2,\"nome\":\"Texto Dramático Vicentino/ Textos Líricos Camonianos\",\"totalHoras\":33,\"limiteFaltas\":3,\"anoCurso\":1,\"idDisciplina\":24,\"disciplina\":\"Português\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":14,\"numero\":3,\"nome\":\"Textos narrativos sobre os Descobrimentos\",\"totalHoras\":32,\"limiteFaltas\":3,\"anoCurso\":1,\"idDisciplina\":24,\"disciplina\":\"Português\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":15,\"numero\":4,\"nome\":\"Textos Argumentativos: Oratória Vieiriana/Texto Dramático Garrettiano\",\"totalHoras\":33,\"limiteFaltas\":3,\"anoCurso\":2,\"idDisciplina\":24,\"disciplina\":\"Português\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":16,\"numero\":5,\"nome\":\"Textos Narrativos Românticos e Realistas/ Naturalistas\",\"totalHoras\":34,\"limiteFaltas\":3,\"anoCurso\":2,\"idDisciplina\":24,\"disciplina\":\"Português\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":17,\"numero\":6,\"nome\":\"Textos Líricos: Antero de Quental e Cesário Verde\",\"totalHoras\":33,\"limiteFaltas\":3,\"anoCurso\":2,\"idDisciplina\":24,\"disciplina\":\"Português\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":18,\"numero\":7,\"nome\":\"Textos Líricos Pessoanos\",\"totalHoras\":40,\"limiteFaltas\":4,\"anoCurso\":2,\"idDisciplina\":24,\"disciplina\":\"Português\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":19,\"numero\":8,\"nome\":\"Texto Épico-Lírico e Lírica Contemporânea\",\"totalHoras\":42,\"limiteFaltas\":4,\"anoCurso\":3,\"idDisciplina\":24,\"disciplina\":\"Português\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":20,\"numero\":9,\"nome\":\"Textos Narrativos Contemporâneas: conto/ romance\",\"totalHoras\":41,\"limiteFaltas\":4,\"anoCurso\":3,\"idDisciplina\":24,\"disciplina\":\"Português\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":117,\"numero\":0,\"nome\":\"teste3\",\"totalHoras\":123,\"limiteFaltas\":19,\"anoCurso\":1,\"idDisciplina\":24,\"disciplina\":\"Português\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":21,\"numero\":1,\"nome\":\"Eu e o Mundo Profissional\",\"totalHoras\":28,\"limiteFaltas\":3,\"anoCurso\":1,\"idDisciplina\":25,\"disciplina\":\"Inglês\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":22,\"numero\":2,\"nome\":\"Um Mundo de Muitas Línguas\",\"totalHoras\":24,\"limiteFaltas\":2,\"anoCurso\":1,\"idDisciplina\":25,\"disciplina\":\"Inglês\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":23,\"numero\":3,\"nome\":\"O Mundo Tecnológico\",\"totalHoras\":24,\"limiteFaltas\":2,\"anoCurso\":1,\"idDisciplina\":25,\"disciplina\":\"Inglês\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":24,\"numero\":4,\"nome\":\"Os Media e a Comunicação Global\",\"totalHoras\":24,\"limiteFaltas\":2,\"anoCurso\":2,\"idDisciplina\":25,\"disciplina\":\"Inglês\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":25,\"numero\":5,\"nome\":\"Os Jovens na Era Global\",\"totalHoras\":24,\"limiteFaltas\":2,\"anoCurso\":2,\"idDisciplina\":25,\"disciplina\":\"Inglês\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":26,\"numero\":6,\"nome\":\"O Mundo à Nossa Volta\",\"totalHoras\":24,\"limiteFaltas\":2,\"anoCurso\":2,\"idDisciplina\":25,\"disciplina\":\"Inglês\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":27,\"numero\":7,\"nome\":\"Os Jovens e o Consumo\",\"totalHoras\":24,\"limiteFaltas\":2,\"anoCurso\":3,\"idDisciplina\":25,\"disciplina\":\"Inglês\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":28,\"numero\":8,\"nome\":\"O Mundo do Trabalho\",\"totalHoras\":24,\"limiteFaltas\":2,\"anoCurso\":3,\"idDisciplina\":25,\"disciplina\":\"Inglês\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":29,\"numero\":9,\"nome\":\"A Comunicação no Mundo Profissional\",\"totalHoras\":24,\"limiteFaltas\":2,\"anoCurso\":3,\"idDisciplina\":25,\"disciplina\":\"Inglês\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":30,\"numero\":1,\"nome\":\"Tema - Problema\",\"totalHoras\":38,\"limiteFaltas\":4,\"anoCurso\":1,\"idDisciplina\":26,\"disciplina\":\"Área de Integração\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":31,\"numero\":2,\"nome\":\"Tema - Problema\",\"totalHoras\":38,\"limiteFaltas\":4,\"anoCurso\":1,\"idDisciplina\":26,\"disciplina\":\"Área de Integração\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":32,\"numero\":3,\"nome\":\"Tema - Problema\",\"totalHoras\":36,\"limiteFaltas\":4,\"anoCurso\":2,\"idDisciplina\":26,\"disciplina\":\"Área de Integração\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":33,\"numero\":4,\"nome\":\"Tema - Problema\",\"totalHoras\":36,\"limiteFaltas\":4,\"anoCurso\":2,\"idDisciplina\":26,\"disciplina\":\"Área de Integração\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":34,\"numero\":5,\"nome\":\"Tema - Problema\",\"totalHoras\":36,\"limiteFaltas\":4,\"anoCurso\":3,\"idDisciplina\":26,\"disciplina\":\"Área de Integração\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":35,\"numero\":6,\"nome\":\"Tema - Problema\",\"totalHoras\":36,\"limiteFaltas\":4,\"anoCurso\":3,\"idDisciplina\":26,\"disciplina\":\"Área de Integração\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":36,\"numero\":1,\"nome\":\"Tema - Problema\",\"totalHoras\":38,\"limiteFaltas\":4,\"anoCurso\":1,\"idDisciplina\":26,\"disciplina\":\"Área de Integração\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":37,\"numero\":2,\"nome\":\"Tema - Problema\",\"totalHoras\":38,\"limiteFaltas\":4,\"anoCurso\":1,\"idDisciplina\":26,\"disciplina\":\"Área de Integração\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":38,\"numero\":3,\"nome\":\"Tema - Problema\",\"totalHoras\":36,\"limiteFaltas\":4,\"anoCurso\":2,\"idDisciplina\":26,\"disciplina\":\"Área de Integração\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":39,\"numero\":4,\"nome\":\"Tema - Problema\",\"totalHoras\":36,\"limiteFaltas\":4,\"anoCurso\":2,\"idDisciplina\":26,\"disciplina\":\"Área de Integração\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":40,\"numero\":5,\"nome\":\"Tema - Problema\",\"totalHoras\":36,\"limiteFaltas\":4,\"anoCurso\":3,\"idDisciplina\":26,\"disciplina\":\"Área de Integração\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":41,\"numero\":6,\"nome\":\"Tema - Problema\",\"totalHoras\":36,\"limiteFaltas\":4,\"anoCurso\":3,\"idDisciplina\":26,\"disciplina\":\"Área de Integração\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":42,\"numero\":1,\"nome\":\"Folha de Cálculo\",\"totalHoras\":33,\"limiteFaltas\":3,\"anoCurso\":1,\"idDisciplina\":27,\"disciplina\":\"Tecnologias de Informação e Comunicação\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":43,\"numero\":2,\"nome\":\"Base de Dados\",\"totalHoras\":33,\"limiteFaltas\":3,\"anoCurso\":2,\"idDisciplina\":27,\"disciplina\":\"Tecnologias de Informação e Comunicação\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":44,\"numero\":3,\"nome\":\"Criação de Páginas Web\",\"totalHoras\":34,\"limiteFaltas\":3,\"anoCurso\":3,\"idDisciplina\":27,\"disciplina\":\"Tecnologias de Informação e Comunicação\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":45,\"numero\":1,\"nome\":\"Jogos Desportivos Coletivos I\",\"totalHoras\":19,\"limiteFaltas\":2,\"anoCurso\":1,\"idDisciplina\":28,\"disciplina\":\"Educação Física\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":46,\"numero\":4,\"nome\":\"Ginástica I\",\"totalHoras\":13,\"limiteFaltas\":1,\"anoCurso\":1,\"idDisciplina\":28,\"disciplina\":\"Educação Física\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":47,\"numero\":7,\"nome\":\"Atletismo/Raquetas I\",\"totalHoras\":13,\"limiteFaltas\":1,\"anoCurso\":1,\"idDisciplina\":28,\"disciplina\":\"Educação Física\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":48,\"numero\":10,\"nome\":\"Dança I\",\"totalHoras\":7,\"limiteFaltas\":1,\"anoCurso\":1,\"idDisciplina\":28,\"disciplina\":\"Educação Física\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":49,\"numero\":13,\"nome\":\"Actividades Físicas / Contextos de Saúde I\",\"totalHoras\":3,\"limiteFaltas\":0,\"anoCurso\":1,\"idDisciplina\":28,\"disciplina\":\"Educação Física\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":50,\"numero\":2,\"nome\":\"Jogos Desportivos Coletivos II\",\"totalHoras\":19,\"limiteFaltas\":2,\"anoCurso\":2,\"idDisciplina\":28,\"disciplina\":\"Educação Física\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":51,\"numero\":5,\"nome\":\"Ginástica II\",\"totalHoras\":13,\"limiteFaltas\":1,\"anoCurso\":2,\"idDisciplina\":28,\"disciplina\":\"Educação Física\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":52,\"numero\":8,\"nome\":\"ATletismo/Raquetas II\",\"totalHoras\":13,\"limiteFaltas\":1,\"anoCurso\":2,\"idDisciplina\":28,\"disciplina\":\"Educação Física\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":53,\"numero\":11,\"nome\":\"Dança II\",\"totalHoras\":7,\"limiteFaltas\":1,\"anoCurso\":2,\"idDisciplina\":28,\"disciplina\":\"Educação Física\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":54,\"numero\":14,\"nome\":\"ACtividades Físicas / Contextos de Saúde II\",\"totalHoras\":3,\"limiteFaltas\":0,\"anoCurso\":2,\"idDisciplina\":28,\"disciplina\":\"Educação Física\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":55,\"numero\":3,\"nome\":\"Jogos Desportivos Coletivos III\",\"totalHoras\":8,\"limiteFaltas\":1,\"anoCurso\":3,\"idDisciplina\":28,\"disciplina\":\"Educação Física\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":56,\"numero\":6,\"nome\":\"Ginástica III\",\"totalHoras\":7,\"limiteFaltas\":1,\"anoCurso\":3,\"idDisciplina\":28,\"disciplina\":\"Educação Física\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":57,\"numero\":9,\"nome\":\"Actividades de Exploração da Natureza\",\"totalHoras\":5,\"limiteFaltas\":1,\"anoCurso\":3,\"idDisciplina\":28,\"disciplina\":\"Educação Física\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":58,\"numero\":12,\"nome\":\"Dança III\",\"totalHoras\":5,\"limiteFaltas\":1,\"anoCurso\":3,\"idDisciplina\":28,\"disciplina\":\"Educação Física\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":59,\"numero\":15,\"nome\":\"Actividades Físicas/ Contextos de Saúde III\",\"totalHoras\":2,\"limiteFaltas\":0,\"anoCurso\":3,\"idDisciplina\":28,\"disciplina\":\"Educação Física\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":60,\"numero\":16,\"nome\":\"Aptidão Física\",\"totalHoras\":3,\"limiteFaltas\":0,\"anoCurso\":3,\"idDisciplina\":28,\"disciplina\":\"Educação Física\",\"componente\":\"Sociocultural\",\"curso\":\"TGEI\"},{\"idModulo\":61,\"numero\":1,\"nome\":\"A1 - Geometria\",\"totalHoras\":36,\"limiteFaltas\":4,\"anoCurso\":1,\"idDisciplina\":29,\"disciplina\":\"Matemática\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":62,\"numero\":2,\"nome\":\"A2 - Funções Polinomiais\",\"totalHoras\":36,\"limiteFaltas\":4,\"anoCurso\":1,\"idDisciplina\":29,\"disciplina\":\"Matemática\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":63,\"numero\":3,\"nome\":\"A3 - Estatistica\",\"totalHoras\":27,\"limiteFaltas\":3,\"anoCurso\":1,\"idDisciplina\":29,\"disciplina\":\"Matemática\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":64,\"numero\":4,\"nome\":\"A4 - Funções Periódicas\",\"totalHoras\":36,\"limiteFaltas\":4,\"anoCurso\":2,\"idDisciplina\":29,\"disciplina\":\"Matemática\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":65,\"numero\":5,\"nome\":\"A5 - Funções Racionais\",\"totalHoras\":36,\"limiteFaltas\":4,\"anoCurso\":2,\"idDisciplina\":29,\"disciplina\":\"Matemática\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":66,\"numero\":6,\"nome\":\"A6 - Taxa de Variação\",\"totalHoras\":27,\"limiteFaltas\":3,\"anoCurso\":2,\"idDisciplina\":29,\"disciplina\":\"Matemática\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":67,\"numero\":7,\"nome\":\"A7 - Probabilidades\",\"totalHoras\":21,\"limiteFaltas\":2,\"anoCurso\":3,\"idDisciplina\":29,\"disciplina\":\"Matemática\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":68,\"numero\":8,\"nome\":\"A8 - Modelos Discretos\",\"totalHoras\":27,\"limiteFaltas\":3,\"anoCurso\":3,\"idDisciplina\":29,\"disciplina\":\"Matemática\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":69,\"numero\":9,\"nome\":\"A9 - Funções de Crescimento\",\"totalHoras\":27,\"limiteFaltas\":3,\"anoCurso\":3,\"idDisciplina\":29,\"disciplina\":\"Matemática\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":70,\"numero\":10,\"nome\":\"A10 - Optimização\",\"totalHoras\":27,\"limiteFaltas\":3,\"anoCurso\":3,\"idDisciplina\":29,\"disciplina\":\"Matemática\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":104,\"numero\":2,\"nome\":\"Q2 - Soluções.\",\"totalHoras\":18,\"limiteFaltas\":2,\"anoCurso\":1,\"idDisciplina\":30,\"disciplina\":\"Física e Química\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":105,\"numero\":3,\"nome\":\"EQ2- Coloídes e Suspensões\",\"totalHoras\":6,\"limiteFaltas\":1,\"anoCurso\":1,\"idDisciplina\":30,\"disciplina\":\"Física e Química\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":106,\"numero\":4,\"nome\":\"F1- Forças e Movimentos\",\"totalHoras\":21,\"limiteFaltas\":2,\"anoCurso\":1,\"idDisciplina\":30,\"disciplina\":\"Física e Química\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":107,\"numero\":5,\"nome\":\"E2F1- Trabalho e Energia\",\"totalHoras\":6,\"limiteFaltas\":1,\"anoCurso\":1,\"idDisciplina\":30,\"disciplina\":\"Física e Química\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":108,\"numero\":6,\"nome\":\"F3 - Luz e Fontes de Luz\",\"totalHoras\":12,\"limiteFaltas\":1,\"anoCurso\":1,\"idDisciplina\":30,\"disciplina\":\"Física e Química\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":109,\"numero\":7,\"nome\":\"E2F3- Ã?tica Ondulatória e Ã?tica Quântica\",\"totalHoras\":9,\"limiteFaltas\":1,\"anoCurso\":2,\"idDisciplina\":30,\"disciplina\":\"Física e Química\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":110,\"numero\":8,\"nome\":\"F4- Circuitos Elétricos\",\"totalHoras\":18,\"limiteFaltas\":2,\"anoCurso\":2,\"idDisciplina\":30,\"disciplina\":\"Física e Química\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":111,\"numero\":9,\"nome\":\"F5 - Termodinâmica\",\"totalHoras\":21,\"limiteFaltas\":2,\"anoCurso\":2,\"idDisciplina\":30,\"disciplina\":\"Física e Química\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":112,\"numero\":10,\"nome\":\"Q3 - Reações Químicas. Equilíbrio Químico Homogéneo.\",\"totalHoras\":18,\"limiteFaltas\":2,\"anoCurso\":2,\"idDisciplina\":30,\"disciplina\":\"Física e Química\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":113,\"numero\":8,\"nome\":\"Q4 - Equilíbrio Ácido-Base\",\"totalHoras\":18,\"limiteFaltas\":2,\"anoCurso\":3,\"idDisciplina\":30,\"disciplina\":\"Física e Química\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":114,\"numero\":9,\"nome\":\"Q5 - Equilíbrio de Oxidação-redução.\",\"totalHoras\":18,\"limiteFaltas\":2,\"anoCurso\":3,\"idDisciplina\":30,\"disciplina\":\"Física e Química\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":115,\"numero\":10,\"nome\":\"F6 - Som\",\"totalHoras\":17,\"limiteFaltas\":2,\"anoCurso\":3,\"idDisciplina\":30,\"disciplina\":\"Física e Química\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":116,\"numero\":1,\"nome\":\"Q1 - Estrutura Atómica. Tabela Periódica. Ligação Química.\",\"totalHoras\":18,\"limiteFaltas\":2,\"anoCurso\":1,\"idDisciplina\":30,\"disciplina\":\"Física e Química\",\"componente\":\"Científica\",\"curso\":\"TGEI\"},{\"idModulo\":71,\"numero\":1,\"nome\":\"Noções Básicas de Electricidade\",\"totalHoras\":16,\"limiteFaltas\":2,\"anoCurso\":1,\"idDisciplina\":31,\"disciplina\":\"Eletrónica Fundamental\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":72,\"numero\":2,\"nome\":\"Análise de Circuitos em Corrente Contínua\",\"totalHoras\":34,\"limiteFaltas\":3,\"anoCurso\":1,\"idDisciplina\":31,\"disciplina\":\"Eletrónica Fundamental\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":73,\"numero\":3,\"nome\":\"Análise de Circuitos em Corrente Alternada\",\"totalHoras\":34,\"limiteFaltas\":3,\"anoCurso\":1,\"idDisciplina\":31,\"disciplina\":\"Eletrónica Fundamental\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":74,\"numero\":4,\"nome\":\"Introdução aos Semicondutores e Díodos\",\"totalHoras\":32,\"limiteFaltas\":3,\"anoCurso\":2,\"idDisciplina\":31,\"disciplina\":\"Eletrónica Fundamental\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":75,\"numero\":5,\"nome\":\"Transístores Bipolares em Regime Estático\",\"totalHoras\":17,\"limiteFaltas\":2,\"anoCurso\":2,\"idDisciplina\":31,\"disciplina\":\"Eletrónica Fundamental\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":76,\"numero\":6,\"nome\":\"Amplificadores com Transístores Bipolares\",\"totalHoras\":27,\"limiteFaltas\":3,\"anoCurso\":2,\"idDisciplina\":31,\"disciplina\":\"Eletrónica Fundamental\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":77,\"numero\":7,\"nome\":\"Amplificadores Operacionais\",\"totalHoras\":28,\"limiteFaltas\":3,\"anoCurso\":3,\"idDisciplina\":31,\"disciplina\":\"Eletrónica Fundamental\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":78,\"numero\":8,\"nome\":\"Tecnologias de Electricidade\",\"totalHoras\":34,\"limiteFaltas\":3,\"anoCurso\":3,\"idDisciplina\":31,\"disciplina\":\"Eletrónica Fundamental\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":79,\"numero\":9,\"nome\":\"Circuitos Impressos\",\"totalHoras\":18,\"limiteFaltas\":2,\"anoCurso\":3,\"idDisciplina\":31,\"disciplina\":\"Eletrónica Fundamental\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":80,\"numero\":1,\"nome\":\"Regras de segurança e ferramentas na manut. de equip. informáticos\",\"totalHoras\":16,\"limiteFaltas\":2,\"anoCurso\":1,\"idDisciplina\":32,\"disciplina\":\"Inst. Man. Equip. Informáticos\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":81,\"numero\":2,\"nome\":\"Montagem de computadores\",\"totalHoras\":44,\"limiteFaltas\":4,\"anoCurso\":1,\"idDisciplina\":32,\"disciplina\":\"Inst. Man. Equip. Informáticos\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":82,\"numero\":3,\"nome\":\"Estrutura e configuração de sistemas operativos monoposto\",\"totalHoras\":31,\"limiteFaltas\":3,\"anoCurso\":1,\"idDisciplina\":32,\"disciplina\":\"Inst. Man. Equip. Informáticos\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":83,\"numero\":4,\"nome\":\"Instalação de sistemas operativos\",\"totalHoras\":31,\"limiteFaltas\":3,\"anoCurso\":1,\"idDisciplina\":32,\"disciplina\":\"Inst. Man. Equip. Informáticos\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":84,\"numero\":5,\"nome\":\"Instalação e utilização de aplicações\",\"totalHoras\":33,\"limiteFaltas\":3,\"anoCurso\":2,\"idDisciplina\":32,\"disciplina\":\"Inst. Man. Equip. Informáticos\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":85,\"numero\":6,\"nome\":\"Técnicas de diagnóstico e reparação de avarias\",\"totalHoras\":18,\"limiteFaltas\":2,\"anoCurso\":2,\"idDisciplina\":32,\"disciplina\":\"Inst. Man. Equip. Informáticos\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":86,\"numero\":7,\"nome\":\"Manutenção de equipamentos\",\"totalHoras\":34,\"limiteFaltas\":3,\"anoCurso\":2,\"idDisciplina\":32,\"disciplina\":\"Inst. Man. Equip. Informáticos\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":87,\"numero\":8,\"nome\":\"Montagem e manutenção de redes de dados\",\"totalHoras\":36,\"limiteFaltas\":4,\"anoCurso\":3,\"idDisciplina\":32,\"disciplina\":\"Inst. Man. Equip. Informáticos\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":88,\"numero\":9,\"nome\":\"Gestão de procedimentos de manutenção\",\"totalHoras\":36,\"limiteFaltas\":4,\"anoCurso\":3,\"idDisciplina\":32,\"disciplina\":\"Inst. Man. Equip. Informáticos\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":89,\"numero\":1,\"nome\":\"Sistemas de Numeração\",\"totalHoras\":30,\"limiteFaltas\":3,\"anoCurso\":1,\"idDisciplina\":33,\"disciplina\":\"Sist. DIg. Arq. Computadores\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":90,\"numero\":2,\"nome\":\"Álgebra e Lógica Booleana\",\"totalHoras\":36,\"limiteFaltas\":4,\"anoCurso\":1,\"idDisciplina\":33,\"disciplina\":\"Sist. DIg. Arq. Computadores\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":91,\"numero\":3,\"nome\":\"Circuitos Combinatórios\",\"totalHoras\":36,\"limiteFaltas\":4,\"anoCurso\":1,\"idDisciplina\":33,\"disciplina\":\"Sist. DIg. Arq. Computadores\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":92,\"numero\":4,\"nome\":\"Circuitos Sequenciais\",\"totalHoras\":36,\"limiteFaltas\":4,\"anoCurso\":1,\"idDisciplina\":33,\"disciplina\":\"Sist. DIg. Arq. Computadores\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":93,\"numero\":5,\"nome\":\"Introdução à Lógica Programável\",\"totalHoras\":18,\"limiteFaltas\":2,\"anoCurso\":1,\"idDisciplina\":33,\"disciplina\":\"Sist. DIg. Arq. Computadores\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":94,\"numero\":6,\"nome\":\"Fundamentos de Programação\",\"totalHoras\":106,\"limiteFaltas\":11,\"anoCurso\":2,\"idDisciplina\":33,\"disciplina\":\"Sist. DIg. Arq. Computadores\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":95,\"numero\":7,\"nome\":\"Arquitectura de Computadores\",\"totalHoras\":33,\"limiteFaltas\":3,\"anoCurso\":3,\"idDisciplina\":33,\"disciplina\":\"Sist. DIg. Arq. Computadores\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":96,\"numero\":8,\"nome\":\"Análise de Equipamentos Informáticos\",\"totalHoras\":33,\"limiteFaltas\":3,\"anoCurso\":3,\"idDisciplina\":33,\"disciplina\":\"Sist. DIg. Arq. Computadores\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":97,\"numero\":9,\"nome\":\"Arquitectura de Microprocessadores\",\"totalHoras\":20,\"limiteFaltas\":2,\"anoCurso\":3,\"idDisciplina\":33,\"disciplina\":\"Sist. DIg. Arq. Computadores\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":98,\"numero\":10,\"nome\":\"Programação de Microprocessadores\",\"totalHoras\":33,\"limiteFaltas\":3,\"anoCurso\":3,\"idDisciplina\":33,\"disciplina\":\"Sist. DIg. Arq. Computadores\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":99,\"numero\":1,\"nome\":\"Introdução às Redes e Transmissão de Dados\",\"totalHoras\":18,\"limiteFaltas\":2,\"anoCurso\":1,\"idDisciplina\":34,\"disciplina\":\"Comunicação de Dados\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":100,\"numero\":2,\"nome\":\"Caracterização de Redes e Comunicação de Dados\",\"totalHoras\":27,\"limiteFaltas\":3,\"anoCurso\":1,\"idDisciplina\":34,\"disciplina\":\"Comunicação de Dados\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":101,\"numero\":3,\"nome\":\"Protocolos de Rede\",\"totalHoras\":27,\"limiteFaltas\":3,\"anoCurso\":1,\"idDisciplina\":34,\"disciplina\":\"Comunicação de Dados\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":102,\"numero\":4,\"nome\":\"Equipamentos e Meios de Transmissão de Dados\",\"totalHoras\":28,\"limiteFaltas\":3,\"anoCurso\":1,\"idDisciplina\":34,\"disciplina\":\"Comunicação de Dados\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"},{\"idModulo\":103,\"numero\":5,\"nome\":\"Instalação e Configuração de Redes\",\"totalHoras\":100,\"limiteFaltas\":10,\"anoCurso\":2,\"idDisciplina\":34,\"disciplina\":\"Comunicação de Dados\",\"componente\":\"Técnica\",\"curso\":\"TGEI\"}]",
+                                    "status": "OK",
+                                    "code": 200
+                                },
+                                {
                                     "id": "rester-290",
                                     "name": "2020-06-22T20:53:49.490Z Listar",
                                     "originalRequest": {
@@ -6834,6 +6890,74 @@
                             "name": "Criar",
                             "response": [
                                 {
+                                    "id": "rester-344",
+                                    "name": "2020-07-07T21:27:57.217Z Criar",
+                                    "originalRequest": {
+                                        "url": "https://proj-final-curso-profissional.herokuapp.com/professores",
+                                        "method": "POST",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            }
+                                        ],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\"nome\":\"Professor A\",\"foto\":\"abcdef\"}"
+                                        }
+                                    },
+                                    "responseTime": 540.0249999947846,
+                                    "header": [
+                                        {
+                                            "key": "Server",
+                                            "value": "Cowboy"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        },
+                                        {
+                                            "key": "X-Powered-By",
+                                            "value": "Express"
+                                        },
+                                        {
+                                            "key": "Access-Control-Allow-Origin",
+                                            "value": "*"
+                                        },
+                                        {
+                                            "key": "Access-Control-Expose-Headers",
+                                            "value": "Location"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json; charset=utf-8"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "122"
+                                        },
+                                        {
+                                            "key": "Etag",
+                                            "value": "W/\"7a-Paj2GNyjP6T74Lx5EuK1OfZe2ys\""
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Tue, 07 Jul 2020 21:27:58 GMT"
+                                        },
+                                        {
+                                            "key": "Via",
+                                            "value": "1.1 vegur"
+                                        }
+                                    ],
+                                    "body": "{\"msg\":\"Error\",\"message\":{\"eng\":\"Invalid data\",\"pt\":\"Os dados que inseriu são inválidos!\"},\"success\":false,\"status\":400}",
+                                    "status": "Bad Request",
+                                    "code": 400
+                                },
+                                {
                                     "id": "rester-300",
                                     "name": "2020-06-24T20:58:11.448Z Criar",
                                     "originalRequest": {
@@ -7362,6 +7486,242 @@
                             "name": "Listar",
                             "response": [
                                 {
+                                    "id": "rester-347",
+                                    "name": "2020-07-08T09:27:03.378Z Listar",
+                                    "originalRequest": {
+                                        "url": "127.0.0.1:8080/professores",
+                                        "method": "GET",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            }
+                                        ]
+                                    },
+                                    "responseTime": 1874.0250000283122,
+                                    "header": [
+                                        {
+                                            "key": "X-Powered-By",
+                                            "value": "Express"
+                                        },
+                                        {
+                                            "key": "Access-Control-Allow-Origin",
+                                            "value": "*"
+                                        },
+                                        {
+                                            "key": "Access-Control-Expose-Headers",
+                                            "value": "Location"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json; charset=utf-8"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "326"
+                                        },
+                                        {
+                                            "key": "ETag",
+                                            "value": "W/\"146-6bEvxkSs8I3uwi73UXg7d2XJEZM\""
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Wed, 08 Jul 2020 09:27:05 GMT"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "body": "[{\"idProfessor\":11,\"nome\":\"Ivone Sousa\"},{\"idProfessor\":8,\"nome\":\"António Morais\"},{\"idProfessor\":6,\"nome\":\"Teste Foto\"},{\"idProfessor\":5,\"nome\":\"Bruno Beato\"},{\"idProfessor\":4,\"nome\":\"Albino Fidalgo\"},{\"idProfessor\":3,\"nome\":\"José Manuel\"},{\"idProfessor\":2,\"nome\":\"António Antunes\"},{\"idProfessor\":1,\"nome\":\"Professor A\"}]",
+                                    "status": "OK",
+                                    "code": 200
+                                },
+                                {
+                                    "id": "rester-346",
+                                    "name": "2020-07-08T08:43:55.016Z Listar",
+                                    "originalRequest": {
+                                        "url": "127.0.0.1:8080/professores",
+                                        "method": "GET",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            }
+                                        ]
+                                    },
+                                    "responseTime": 933.5199999585748,
+                                    "header": [
+                                        {
+                                            "key": "X-Powered-By",
+                                            "value": "Express"
+                                        },
+                                        {
+                                            "key": "Access-Control-Allow-Origin",
+                                            "value": "*"
+                                        },
+                                        {
+                                            "key": "Access-Control-Expose-Headers",
+                                            "value": "Location"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json; charset=utf-8"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "122"
+                                        },
+                                        {
+                                            "key": "ETag",
+                                            "value": "W/\"7a-Paj2GNyjP6T74Lx5EuK1OfZe2ys\""
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Wed, 08 Jul 2020 08:43:55 GMT"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "body": "{\"msg\":\"Error\",\"message\":{\"eng\":\"Invalid data\",\"pt\":\"Os dados que inseriu são inválidos!\"},\"success\":false,\"status\":400}",
+                                    "status": "Bad Request",
+                                    "code": 400
+                                },
+                                {
+                                    "id": "rester-345",
+                                    "name": "2020-07-08T08:37:25.506Z Listar",
+                                    "originalRequest": {
+                                        "url": "127.0.0.1:8080/professores",
+                                        "method": "GET",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            }
+                                        ]
+                                    },
+                                    "responseTime": 436.22500006854534,
+                                    "header": [
+                                        {
+                                            "key": "X-Powered-By",
+                                            "value": "Express"
+                                        },
+                                        {
+                                            "key": "Access-Control-Allow-Origin",
+                                            "value": "*"
+                                        },
+                                        {
+                                            "key": "Access-Control-Expose-Headers",
+                                            "value": "Location"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json; charset=utf-8"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "326"
+                                        },
+                                        {
+                                            "key": "ETag",
+                                            "value": "W/\"146-6bEvxkSs8I3uwi73UXg7d2XJEZM\""
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Wed, 08 Jul 2020 08:37:25 GMT"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "body": "[{\"idProfessor\":11,\"nome\":\"Ivone Sousa\"},{\"idProfessor\":8,\"nome\":\"António Morais\"},{\"idProfessor\":6,\"nome\":\"Teste Foto\"},{\"idProfessor\":5,\"nome\":\"Bruno Beato\"},{\"idProfessor\":4,\"nome\":\"Albino Fidalgo\"},{\"idProfessor\":3,\"nome\":\"José Manuel\"},{\"idProfessor\":2,\"nome\":\"António Antunes\"},{\"idProfessor\":1,\"nome\":\"Professor A\"}]",
+                                    "status": "OK",
+                                    "code": 200
+                                },
+                                {
+                                    "id": "rester-343",
+                                    "name": "2020-07-07T21:27:30.624Z Listar",
+                                    "originalRequest": {
+                                        "url": "https://proj-final-curso-profissional.herokuapp.com/professores",
+                                        "method": "GET",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            }
+                                        ]
+                                    },
+                                    "responseTime": 673.6650000102818,
+                                    "header": [
+                                        {
+                                            "key": "Server",
+                                            "value": "Cowboy"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        },
+                                        {
+                                            "key": "X-Powered-By",
+                                            "value": "Express"
+                                        },
+                                        {
+                                            "key": "Access-Control-Allow-Origin",
+                                            "value": "*"
+                                        },
+                                        {
+                                            "key": "Access-Control-Expose-Headers",
+                                            "value": "Location"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json; charset=utf-8"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "122"
+                                        },
+                                        {
+                                            "key": "Etag",
+                                            "value": "W/\"7a-Paj2GNyjP6T74Lx5EuK1OfZe2ys\""
+                                        },
+                                        {
+                                            "key": "Set-Cookie",
+                                            "value": "connect.sid=s%3AkYCx9mlQXP8LrbYx5NT_sD-sxr_FPC3n.O1kzV%2FN2tOMTgFvHr0GqRfrYQZw1g3%2BKk3hdnbcyxIQ; Path=/; Expires=Tue, 07 Jul 2020 21:28:31 GMT; HttpOnly; Secure"
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Tue, 07 Jul 2020 21:27:31 GMT"
+                                        },
+                                        {
+                                            "key": "Via",
+                                            "value": "1.1 vegur"
+                                        }
+                                    ],
+                                    "body": "{\"msg\":\"Error\",\"message\":{\"eng\":\"Invalid data\",\"pt\":\"Os dados que inseriu são inválidos!\"},\"success\":false,\"status\":400}",
+                                    "status": "Bad Request",
+                                    "code": 400
+                                },
+                                {
                                     "id": "rester-298",
                                     "name": "2020-06-23T23:00:48.900Z Listar",
                                     "originalRequest": {
@@ -7618,250 +7978,6 @@
                                             "code": 404
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "request": {
-                                "url": "127.0.0.1:8080/turmas/1/professor/1",
-                                "method": "POST",
-                                "header": [
-                                    {
-                                        "key": "Accept",
-                                        "value": "application/json"
-                                    },
-                                    {
-                                        "key": "Content-Type",
-                                        "value": "application/json"
-                                    }
-                                ]
-                            },
-                            "id": "rester-50",
-                            "name": "AssociarProfessor",
-                            "response": [
-                                {
-                                    "id": "rester-305",
-                                    "name": "2020-06-27T17:02:37.278Z AssociarProfessor",
-                                    "originalRequest": {
-                                        "url": "127.0.0.1:8080/turmas/1/professor/1",
-                                        "method": "POST",
-                                        "header": [
-                                            {
-                                                "key": "Accept",
-                                                "value": "application/json"
-                                            },
-                                            {
-                                                "key": "Content-Type",
-                                                "value": "application/json"
-                                            }
-                                        ]
-                                    },
-                                    "responseTime": 336.4650000035763,
-                                    "header": [
-                                        {
-                                            "key": "X-Powered-By",
-                                            "value": "Express"
-                                        },
-                                        {
-                                            "key": "Access-Control-Allow-Origin",
-                                            "value": "*"
-                                        },
-                                        {
-                                            "key": "Access-Control-Expose-Headers",
-                                            "value": "Location"
-                                        },
-                                        {
-                                            "key": "Content-Type",
-                                            "value": "application/json; charset=utf-8"
-                                        },
-                                        {
-                                            "key": "Content-Length",
-                                            "value": "129"
-                                        },
-                                        {
-                                            "key": "ETag",
-                                            "value": "W/\"81-dEYyK981hsApKbbRO1hEkbAs3Xs\""
-                                        },
-                                        {
-                                            "key": "Date",
-                                            "value": "Sat, 27 Jun 2020 17:02:37 GMT"
-                                        },
-                                        {
-                                            "key": "Connection",
-                                            "value": "keep-alive"
-                                        }
-                                    ],
-                                    "body": "{\"msg\":\"success\",\"message\":{\"eng\":\"Record inserted with success\",\"pt\":\"Dados inseridos com sucesso\"},\"success\":true,\"status\":201}",
-                                    "status": "Created",
-                                    "code": 201
-                                },
-                                {
-                                    "id": "rester-287",
-                                    "name": "2020-06-22T19:33:01.259Z AssociarProfessor",
-                                    "originalRequest": {
-                                        "url": "127.0.0.1:8080/turmas/1/professor/1",
-                                        "method": "POST",
-                                        "header": [
-                                            {
-                                                "key": "Accept",
-                                                "value": "application/json"
-                                            },
-                                            {
-                                                "key": "Content-Type",
-                                                "value": "application/json"
-                                            }
-                                        ]
-                                    },
-                                    "responseTime": 236.00500000081956,
-                                    "header": [
-                                        {
-                                            "key": "X-Powered-By",
-                                            "value": "Express"
-                                        },
-                                        {
-                                            "key": "Access-Control-Allow-Origin",
-                                            "value": "*"
-                                        },
-                                        {
-                                            "key": "Access-Control-Expose-Headers",
-                                            "value": "Location"
-                                        },
-                                        {
-                                            "key": "Content-Type",
-                                            "value": "application/json; charset=utf-8"
-                                        },
-                                        {
-                                            "key": "Content-Length",
-                                            "value": "129"
-                                        },
-                                        {
-                                            "key": "ETag",
-                                            "value": "W/\"81-dEYyK981hsApKbbRO1hEkbAs3Xs\""
-                                        },
-                                        {
-                                            "key": "Date",
-                                            "value": "Mon, 22 Jun 2020 19:33:01 GMT"
-                                        },
-                                        {
-                                            "key": "Connection",
-                                            "value": "keep-alive"
-                                        }
-                                    ],
-                                    "body": "{\"msg\":\"success\",\"message\":{\"eng\":\"Record inserted with success\",\"pt\":\"Dados inseridos com sucesso\"},\"success\":true,\"status\":201}",
-                                    "status": "Created",
-                                    "code": 201
-                                },
-                                {
-                                    "id": "rester-286",
-                                    "name": "2020-06-22T19:32:16.602Z AssociarProfessor",
-                                    "originalRequest": {
-                                        "url": "127.0.0.1:8080/turmas/1/professor/1",
-                                        "method": "POST",
-                                        "header": [
-                                            {
-                                                "key": "Accept",
-                                                "value": "application/json"
-                                            },
-                                            {
-                                                "key": "Content-Type",
-                                                "value": "application/json"
-                                            }
-                                        ]
-                                    },
-                                    "responseTime": 198.3099999986589,
-                                    "header": [
-                                        {
-                                            "key": "X-Powered-By",
-                                            "value": "Express"
-                                        },
-                                        {
-                                            "key": "Access-Control-Allow-Origin",
-                                            "value": "*"
-                                        },
-                                        {
-                                            "key": "Access-Control-Expose-Headers",
-                                            "value": "Location"
-                                        },
-                                        {
-                                            "key": "Content-Type",
-                                            "value": "application/json; charset=utf-8"
-                                        },
-                                        {
-                                            "key": "Content-Length",
-                                            "value": "122"
-                                        },
-                                        {
-                                            "key": "ETag",
-                                            "value": "W/\"7a-Paj2GNyjP6T74Lx5EuK1OfZe2ys\""
-                                        },
-                                        {
-                                            "key": "Date",
-                                            "value": "Mon, 22 Jun 2020 19:32:16 GMT"
-                                        },
-                                        {
-                                            "key": "Connection",
-                                            "value": "keep-alive"
-                                        }
-                                    ],
-                                    "body": "{\"msg\":\"Error\",\"message\":{\"eng\":\"Invalid data\",\"pt\":\"Os dados que inseriu são inválidos!\"},\"success\":false,\"status\":400}",
-                                    "status": "Bad Request",
-                                    "code": 400
-                                },
-                                {
-                                    "id": "rester-285",
-                                    "name": "2020-06-22T19:31:39.411Z AssociarProfessor",
-                                    "originalRequest": {
-                                        "url": "127.0.0.1:8080/turmas/1/professor/1",
-                                        "method": "POST",
-                                        "header": [
-                                            {
-                                                "key": "Accept",
-                                                "value": "application/json"
-                                            },
-                                            {
-                                                "key": "Content-Type",
-                                                "value": "application/json"
-                                            }
-                                        ]
-                                    },
-                                    "responseTime": 346.2949999999255,
-                                    "header": [
-                                        {
-                                            "key": "X-Powered-By",
-                                            "value": "Express"
-                                        },
-                                        {
-                                            "key": "Access-Control-Allow-Origin",
-                                            "value": "*"
-                                        },
-                                        {
-                                            "key": "Access-Control-Expose-Headers",
-                                            "value": "Location"
-                                        },
-                                        {
-                                            "key": "Content-Type",
-                                            "value": "application/json; charset=utf-8"
-                                        },
-                                        {
-                                            "key": "Content-Length",
-                                            "value": "122"
-                                        },
-                                        {
-                                            "key": "ETag",
-                                            "value": "W/\"7a-Paj2GNyjP6T74Lx5EuK1OfZe2ys\""
-                                        },
-                                        {
-                                            "key": "Date",
-                                            "value": "Mon, 22 Jun 2020 19:31:39 GMT"
-                                        },
-                                        {
-                                            "key": "Connection",
-                                            "value": "keep-alive"
-                                        }
-                                    ],
-                                    "body": "{\"msg\":\"Error\",\"message\":{\"eng\":\"Invalid data\",\"pt\":\"Os dados que inseriu são inválidos!\"},\"success\":false,\"status\":400}",
-                                    "status": "Bad Request",
-                                    "code": 400
                                 }
                             ]
                         },
@@ -9564,6 +9680,726 @@
                                     "body": "[{\"idTurma\":1,\"nome\":\"10º F\",\"anoLetivo\":\"2019/2020\",\"anoCurso\":1,\"idCursoProfissional\":1,\"curso\":\"TGEI\"}]",
                                     "status": "OK",
                                     "code": 200
+                                }
+                            ]
+                        },
+                        {
+                            "request": {
+                                "url": "127.0.0.1:8080/turmas/1/professores",
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ]
+                            },
+                            "id": "rester-63",
+                            "name": "Professores",
+                            "response": [
+                                {
+                                    "id": "rester-356",
+                                    "name": "2020-07-08T18:47:22.178Z Professores",
+                                    "originalRequest": {
+                                        "url": "127.0.0.1:8080/turmas/1/professores",
+                                        "method": "GET",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            }
+                                        ]
+                                    },
+                                    "responseTime": 60.36999996006489,
+                                    "header": [
+                                        {
+                                            "key": "X-Powered-By",
+                                            "value": "Express"
+                                        },
+                                        {
+                                            "key": "Access-Control-Allow-Origin",
+                                            "value": "*"
+                                        },
+                                        {
+                                            "key": "Access-Control-Expose-Headers",
+                                            "value": "Location"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json; charset=utf-8"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "264"
+                                        },
+                                        {
+                                            "key": "ETag",
+                                            "value": "W/\"108-7kyMIgxcXscq3k5Dqp5oIlhRH9g\""
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Wed, 08 Jul 2020 18:47:22 GMT"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "body": "[{\"idProfessor\":1,\"nome\":\"Professor A\",\"idTurma\":1,\"turma\":\"10º F\",\"anoLetivo\":\"2019/2020\",\"anoCurso\":1,\"idCursoProfissional\":1},{\"idProfessor\":2,\"nome\":\"António Antunes\",\"idTurma\":1,\"turma\":\"10º F\",\"anoLetivo\":\"2019/2020\",\"anoCurso\":1,\"idCursoProfissional\":1}]",
+                                    "status": "OK",
+                                    "code": 200
+                                },
+                                {
+                                    "id": "rester-354",
+                                    "name": "2020-07-08T18:46:34.481Z Professores",
+                                    "originalRequest": {
+                                        "url": "127.0.0.1:8080/turmas/1/professores",
+                                        "method": "GET",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            }
+                                        ]
+                                    },
+                                    "responseTime": 284.78999994695187,
+                                    "header": [
+                                        {
+                                            "key": "X-Powered-By",
+                                            "value": "Express"
+                                        },
+                                        {
+                                            "key": "Access-Control-Allow-Origin",
+                                            "value": "*"
+                                        },
+                                        {
+                                            "key": "Access-Control-Expose-Headers",
+                                            "value": "Location"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json; charset=utf-8"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "130"
+                                        },
+                                        {
+                                            "key": "ETag",
+                                            "value": "W/\"82-/KumVHD/BUfOksL7uUhq1VV6kqM\""
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Wed, 08 Jul 2020 18:46:34 GMT"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "body": "[{\"idProfessor\":1,\"nome\":\"Professor A\",\"idTurma\":1,\"turma\":\"10º F\",\"anoLetivo\":\"2019/2020\",\"anoCurso\":1,\"idCursoProfissional\":1}]",
+                                    "status": "OK",
+                                    "code": 200
+                                },
+                                {
+                                    "id": "rester-353",
+                                    "name": "2020-07-08T18:46:02.052Z Professores",
+                                    "originalRequest": {
+                                        "url": "127.0.0.1:8080/turmas/1/professores",
+                                        "method": "GET",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            }
+                                        ]
+                                    },
+                                    "responseTime": 185.02500000596046,
+                                    "header": [
+                                        {
+                                            "key": "X-Powered-By",
+                                            "value": "Express"
+                                        },
+                                        {
+                                            "key": "Access-Control-Allow-Origin",
+                                            "value": "*"
+                                        },
+                                        {
+                                            "key": "Access-Control-Expose-Headers",
+                                            "value": "Location"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json; charset=utf-8"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "122"
+                                        },
+                                        {
+                                            "key": "ETag",
+                                            "value": "W/\"7a-Paj2GNyjP6T74Lx5EuK1OfZe2ys\""
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Wed, 08 Jul 2020 18:46:02 GMT"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "body": "{\"msg\":\"Error\",\"message\":{\"eng\":\"Invalid data\",\"pt\":\"Os dados que inseriu são inválidos!\"},\"success\":false,\"status\":400}",
+                                    "status": "Bad Request",
+                                    "code": 400
+                                },
+                                {
+                                    "id": "rester-352",
+                                    "name": "2020-07-08T18:45:22.542Z Professores",
+                                    "originalRequest": {
+                                        "url": "127.0.0.1:8080/turmas/1/professores",
+                                        "method": "GET",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            }
+                                        ]
+                                    },
+                                    "responseTime": 401.8099999576807,
+                                    "header": [
+                                        {
+                                            "key": "X-Powered-By",
+                                            "value": "Express"
+                                        },
+                                        {
+                                            "key": "Access-Control-Allow-Origin",
+                                            "value": "*"
+                                        },
+                                        {
+                                            "key": "Access-Control-Expose-Headers",
+                                            "value": "Location"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json; charset=utf-8"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "122"
+                                        },
+                                        {
+                                            "key": "ETag",
+                                            "value": "W/\"7a-Paj2GNyjP6T74Lx5EuK1OfZe2ys\""
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Wed, 08 Jul 2020 18:45:22 GMT"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "body": "{\"msg\":\"Error\",\"message\":{\"eng\":\"Invalid data\",\"pt\":\"Os dados que inseriu são inválidos!\"},\"success\":false,\"status\":400}",
+                                    "status": "Bad Request",
+                                    "code": 400
+                                }
+                            ]
+                        },
+                        {
+                            "request": {
+                                "url": "127.0.0.1:8080/turmas/1/professores/1",
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ]
+                            },
+                            "id": "rester-50",
+                            "name": "ProfessoresAssociar",
+                            "response": [
+                                {
+                                    "id": "rester-355",
+                                    "name": "2020-07-08T18:47:17.081Z ProfessoresAssociar",
+                                    "originalRequest": {
+                                        "url": "127.0.0.1:8080/turmas/1/professores/2",
+                                        "method": "POST",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            }
+                                        ]
+                                    },
+                                    "responseTime": 162.82500000298023,
+                                    "header": [
+                                        {
+                                            "key": "X-Powered-By",
+                                            "value": "Express"
+                                        },
+                                        {
+                                            "key": "Access-Control-Allow-Origin",
+                                            "value": "*"
+                                        },
+                                        {
+                                            "key": "Access-Control-Expose-Headers",
+                                            "value": "Location"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json; charset=utf-8"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "129"
+                                        },
+                                        {
+                                            "key": "ETag",
+                                            "value": "W/\"81-dEYyK981hsApKbbRO1hEkbAs3Xs\""
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Wed, 08 Jul 2020 18:47:17 GMT"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "body": "{\"msg\":\"success\",\"message\":{\"eng\":\"Record inserted with success\",\"pt\":\"Dados inseridos com sucesso\"},\"success\":true,\"status\":201}",
+                                    "status": "Created",
+                                    "code": 201
+                                },
+                                {
+                                    "id": "rester-351",
+                                    "name": "2020-07-08T18:40:58.452Z AssociarProfessor",
+                                    "originalRequest": {
+                                        "url": "127.0.0.1:8080/turmas/1/professor/1",
+                                        "method": "POST",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            }
+                                        ]
+                                    },
+                                    "responseTime": 666.910000026226,
+                                    "header": [
+                                        {
+                                            "key": "X-Powered-By",
+                                            "value": "Express"
+                                        },
+                                        {
+                                            "key": "Access-Control-Allow-Origin",
+                                            "value": "*"
+                                        },
+                                        {
+                                            "key": "Access-Control-Expose-Headers",
+                                            "value": "Location"
+                                        },
+                                        {
+                                            "key": "Content-Security-Policy",
+                                            "value": "default-src 'none'"
+                                        },
+                                        {
+                                            "key": "X-Content-Type-Options",
+                                            "value": "nosniff"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "text/html; charset=utf-8"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "160"
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Wed, 08 Jul 2020 18:40:58 GMT"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "body": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /turmas/1/professor/1</pre>\n</body>\n</html>\n",
+                                    "status": "Not Found",
+                                    "code": 404
+                                },
+                                {
+                                    "id": "rester-350",
+                                    "name": "2020-07-08T18:35:31.998Z AssociarProfessor",
+                                    "originalRequest": {
+                                        "url": "127.0.0.1:8080/turmas/1/professor/1",
+                                        "method": "POST",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            }
+                                        ]
+                                    },
+                                    "responseTime": 755.690000012517,
+                                    "header": [
+                                        {
+                                            "key": "X-Powered-By",
+                                            "value": "Express"
+                                        },
+                                        {
+                                            "key": "Access-Control-Allow-Origin",
+                                            "value": "*"
+                                        },
+                                        {
+                                            "key": "Access-Control-Expose-Headers",
+                                            "value": "Location"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json; charset=utf-8"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "122"
+                                        },
+                                        {
+                                            "key": "ETag",
+                                            "value": "W/\"7a-Paj2GNyjP6T74Lx5EuK1OfZe2ys\""
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Wed, 08 Jul 2020 18:35:32 GMT"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "body": "{\"msg\":\"Error\",\"message\":{\"eng\":\"Invalid data\",\"pt\":\"Os dados que inseriu são inválidos!\"},\"success\":false,\"status\":400}",
+                                    "status": "Bad Request",
+                                    "code": 400
+                                },
+                                {
+                                    "id": "rester-349",
+                                    "name": "2020-07-08T18:35:23.552Z AssociarProfessor",
+                                    "originalRequest": {
+                                        "url": "127.0.0.1:8080/turmas/1/professores/1",
+                                        "method": "POST",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            }
+                                        ]
+                                    },
+                                    "responseTime": 1099.9549999833107,
+                                    "header": [
+                                        {
+                                            "key": "X-Powered-By",
+                                            "value": "Express"
+                                        },
+                                        {
+                                            "key": "Access-Control-Allow-Origin",
+                                            "value": "*"
+                                        },
+                                        {
+                                            "key": "Access-Control-Expose-Headers",
+                                            "value": "Location"
+                                        },
+                                        {
+                                            "key": "Content-Security-Policy",
+                                            "value": "default-src 'none'"
+                                        },
+                                        {
+                                            "key": "X-Content-Type-Options",
+                                            "value": "nosniff"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "text/html; charset=utf-8"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "162"
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Wed, 08 Jul 2020 18:35:24 GMT"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "body": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /turmas/1/professores/1</pre>\n</body>\n</html>\n",
+                                    "status": "Not Found",
+                                    "code": 404
+                                },
+                                {
+                                    "id": "rester-305",
+                                    "name": "2020-06-27T17:02:37.278Z AssociarProfessor",
+                                    "originalRequest": {
+                                        "url": "127.0.0.1:8080/turmas/1/professor/1",
+                                        "method": "POST",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            }
+                                        ]
+                                    },
+                                    "responseTime": 336.4650000035763,
+                                    "header": [
+                                        {
+                                            "key": "X-Powered-By",
+                                            "value": "Express"
+                                        },
+                                        {
+                                            "key": "Access-Control-Allow-Origin",
+                                            "value": "*"
+                                        },
+                                        {
+                                            "key": "Access-Control-Expose-Headers",
+                                            "value": "Location"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json; charset=utf-8"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "129"
+                                        },
+                                        {
+                                            "key": "ETag",
+                                            "value": "W/\"81-dEYyK981hsApKbbRO1hEkbAs3Xs\""
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Sat, 27 Jun 2020 17:02:37 GMT"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "body": "{\"msg\":\"success\",\"message\":{\"eng\":\"Record inserted with success\",\"pt\":\"Dados inseridos com sucesso\"},\"success\":true,\"status\":201}",
+                                    "status": "Created",
+                                    "code": 201
+                                },
+                                {
+                                    "id": "rester-287",
+                                    "name": "2020-06-22T19:33:01.259Z AssociarProfessor",
+                                    "originalRequest": {
+                                        "url": "127.0.0.1:8080/turmas/1/professor/1",
+                                        "method": "POST",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            }
+                                        ]
+                                    },
+                                    "responseTime": 236.00500000081956,
+                                    "header": [
+                                        {
+                                            "key": "X-Powered-By",
+                                            "value": "Express"
+                                        },
+                                        {
+                                            "key": "Access-Control-Allow-Origin",
+                                            "value": "*"
+                                        },
+                                        {
+                                            "key": "Access-Control-Expose-Headers",
+                                            "value": "Location"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json; charset=utf-8"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "129"
+                                        },
+                                        {
+                                            "key": "ETag",
+                                            "value": "W/\"81-dEYyK981hsApKbbRO1hEkbAs3Xs\""
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Mon, 22 Jun 2020 19:33:01 GMT"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "body": "{\"msg\":\"success\",\"message\":{\"eng\":\"Record inserted with success\",\"pt\":\"Dados inseridos com sucesso\"},\"success\":true,\"status\":201}",
+                                    "status": "Created",
+                                    "code": 201
+                                },
+                                {
+                                    "id": "rester-286",
+                                    "name": "2020-06-22T19:32:16.602Z AssociarProfessor",
+                                    "originalRequest": {
+                                        "url": "127.0.0.1:8080/turmas/1/professor/1",
+                                        "method": "POST",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            }
+                                        ]
+                                    },
+                                    "responseTime": 198.3099999986589,
+                                    "header": [
+                                        {
+                                            "key": "X-Powered-By",
+                                            "value": "Express"
+                                        },
+                                        {
+                                            "key": "Access-Control-Allow-Origin",
+                                            "value": "*"
+                                        },
+                                        {
+                                            "key": "Access-Control-Expose-Headers",
+                                            "value": "Location"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json; charset=utf-8"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "122"
+                                        },
+                                        {
+                                            "key": "ETag",
+                                            "value": "W/\"7a-Paj2GNyjP6T74Lx5EuK1OfZe2ys\""
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Mon, 22 Jun 2020 19:32:16 GMT"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "body": "{\"msg\":\"Error\",\"message\":{\"eng\":\"Invalid data\",\"pt\":\"Os dados que inseriu são inválidos!\"},\"success\":false,\"status\":400}",
+                                    "status": "Bad Request",
+                                    "code": 400
+                                },
+                                {
+                                    "id": "rester-285",
+                                    "name": "2020-06-22T19:31:39.411Z AssociarProfessor",
+                                    "originalRequest": {
+                                        "url": "127.0.0.1:8080/turmas/1/professor/1",
+                                        "method": "POST",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            }
+                                        ]
+                                    },
+                                    "responseTime": 346.2949999999255,
+                                    "header": [
+                                        {
+                                            "key": "X-Powered-By",
+                                            "value": "Express"
+                                        },
+                                        {
+                                            "key": "Access-Control-Allow-Origin",
+                                            "value": "*"
+                                        },
+                                        {
+                                            "key": "Access-Control-Expose-Headers",
+                                            "value": "Location"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json; charset=utf-8"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "122"
+                                        },
+                                        {
+                                            "key": "ETag",
+                                            "value": "W/\"7a-Paj2GNyjP6T74Lx5EuK1OfZe2ys\""
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Mon, 22 Jun 2020 19:31:39 GMT"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "body": "{\"msg\":\"Error\",\"message\":{\"eng\":\"Invalid data\",\"pt\":\"Os dados que inseriu são inválidos!\"},\"success\":false,\"status\":400}",
+                                    "status": "Bad Request",
+                                    "code": 400
                                 }
                             ]
                         }

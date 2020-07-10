@@ -136,7 +136,7 @@ function deleteL(req, res) {
     //console.log(req.body);
     const idAluno = req.sanitize('id').escape();
     const update = [0, idAluno];
-    const query = connect.con.query('UPDATE alunos SET activo = ? WHERE idAluno=?', update, function(err, rows, fields) {
+    const query = connect.con.query('UPDATE alunos SET ativo = ? WHERE idAluno=?', update, function(err, rows, fields) {
         console.log(query.sql);
         if (!err) {
             console.log(`Registo ${idAluno} desativado com sucesso`);

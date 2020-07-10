@@ -49,9 +49,13 @@ let isNew = true
         else {
             modulos = await response.json()
             
+            const responseT = await fetch(`${urlBase}/turmas/${idTurma}`)
+            const turma = await responseT.json()
+            //console.log(turma)
+         
             // TODO: Ir buscar o nome por Id em vez do 1º
             document.getElementById("txtDisciplina").innerHTML = modulos[0].disciplina
-            document.getElementById("txtTurma").innerHTML = modulos[0].turma
+            document.getElementById("txtTurma").innerHTML = turma[0].nome
             document.getElementById("txtCurso").innerHTML = modulos[0].curso 
             
             let i = 1

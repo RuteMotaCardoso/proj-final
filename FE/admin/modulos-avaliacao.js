@@ -54,6 +54,7 @@ let isNew = true
         const valAprovado = selAprovado.options[selAprovado.selectedIndex].value
         let txtIdAvaliacao = document.getElementById("txtIdAvaliacao").value
 
+        console.log(txtIdAvaliacao)
         console.log(txtDataAvaliacao.value)
         //let txtIdAluno = document.getElementById("txtIdAluno").value
 
@@ -166,9 +167,27 @@ let isNew = true
         for (let i = 0; i < btnEdit.length; i++) {
             btnEdit[i].addEventListener("click", () => {
                 isNew = false
-                for (const aluno of alunos) {
-                    if (aluno.idAluno == btnEdit[i].getAttribute("id")) {  //não mudar
-                        document.getElementById("txtNome").value = aluno.nome
+                for (const avaliacao of avaliacoes) {
+                    console.log(avaliacao.idAvaliacoesModulos)
+                    if (avaliacao.idAvaliacoesModulos == btnEdit[i].getAttribute("id")) {  //não mudar
+                        document.getElementById("txtIdAvaliacao").value = avaliacao.idAvaliacoesModulos
+                        document.getElementById("txtAvaliacao").value = avaliacao.avaliacao
+                        document.getElementById("txtFaltas").value = avaliacao.faltas
+                        document.getElementById("txtDataAvaliacao").value = avaliacao.dataAvaliacao.split("T")[0]
+                        document.getElementById("txtAprovado").value = converteSimNao(avaliacao.aprovado)
+                        // Find aluno in select
+                        let selAluno = document.getElementById("selAlunos").options
+                        selectTextOption(selAluno, avaliacao.aluno)
+                        // Find professor in select
+                        let selProfessor = document.getElementById("selProfessores").options
+                        selectTextOption(selProfessor, avaliacao.professor)
+                        // Find disciplina in select
+                        let selDisciplina = document.getElementById("selDisciplinas").options
+                        selectTextOption(selDisciplina, avaliacao.disciplina)
+                        // Find modulo in select
+                        let selModulo = document.getElementById("selModulos").options
+                        selectTextOption(selModulo, avaliacao.modulo)
+                        scroll(0,0)
                     }
                 }
             })
@@ -184,9 +203,9 @@ let isNew = true
            const btnVer = document.getElementsByClassName("ver")
            for (let i = 0; i < btnVer.length; i++) {
                btnVer[i].addEventListener("click", () => {
-                   for (const aluno of alunos) {
-                       if (aluno.idAluno == btnVer[i].getAttribute("id")) {  //não mudar
-                           document.location="alunos.html?idAluno=" + aluno.idAluno;
+                   for (const idAvaliacoesModulos of avaliacoes) {
+                       if (idAvaliacoesModulos.idAvaliacoesModulos == btnVer[i].getAttribute("id")) {  //não mudar
+                           document.location="alunos.html?idAluno=" + idAvaliacoesModulos.idAluno;
                            return false;
                        }
                    }
@@ -216,7 +235,7 @@ let isNew = true
                         let idModuloAvaliacao = btnDelete[i].getAttribute("id")  //não mudar
                         try {
                             console.log(idModuloAvaliacao);
-                            const response = await fetch(`${urlBase}/modulosAvaliacao/del/${idModuloAvaliacao}`, {
+                            const response = await fetch(`${urlBase}/modulosAvaliacoes/del/${idModuloAvaliacao}`, {
                                 method: "PUT"
                             })
                             if (response.status == 204) {
